@@ -35,10 +35,6 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
-  go_router: ^14.2.8
-  shared_preferences: ^2.3.2
-  mobx: ^2.3.3+2
-  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
@@ -78,20 +74,5 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: Poppins
-      fonts:
-        - asset: assets/fonts/Poppins-Bold.ttf
-        - asset: assets/fonts/Poppins-Medium.ttf
-        - asset: assets/fonts/Poppins-Regular.ttf
-        - asset: assets/fonts/Poppins-SemiBold.ttf
-    - family: ReadexPro
-      fonts:
-        - asset: assets/fonts/ReadexPro-Regular.ttf
-
-    - family: Hanzala
-      fonts:
-        - asset: assets/fonts/Hanzala 8.2regular.ttf
-
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
