@@ -1,0 +1,185 @@
+[
+  {
+    "konu": "Harfler",
+    "icon": {
+      "rika": "harfler_rika",
+      "matbu": "harfler_matbu"
+    },
+    "dersler": [
+      {
+        "dersAdi": "Osmanlı Türkçesinde Bulunan Harfler",
+        "link": ""
+      },
+      {
+        "dersAdi": "Harflerin Rik’a Hattı Yazılışları",
+        "link": ""
+      },
+      {
+        "dersAdi": "Harflerin Birleşim Halleri",
+        "link": ""
+      },
+      {
+        "dersAdi": "Rakamlar ve Sayılar",
+        "link": ""
+      }
+    ],
+    "renkler": {
+      "primary": "primary",
+      "secondary": "primaryContainer"
+    }
+  },
+  {
+    "konu": "Okutucu Harfler",
+    "icon": {
+      "rika": "okutucu_harfler_rika",
+      "matbu": "okutucu_harfler_matbu"
+    },
+    "dersler": [
+      {
+        "dersAdi": "Osmanlıca Okutucu Harfler",
+        "link": ""
+      },
+      {
+        "dersAdi": "\"Elif\" Okutucusu Örnekleri",
+        "link": ""
+      },
+      {
+        "dersAdi": "\"He\" Okutucusunun A Sesiyle Okuttuğu Yerler",
+        "link": ""
+      },
+      {
+        "dersAdi": "\"He\" Okutucusu Örnekleri",
+        "link": ""
+      },
+      {
+        "dersAdi": "Kalın ve İnce Karşılığı Olan Harfler",
+        "link": ""
+      },{
+        "dersAdi": "Siyak-Sibak Meselesi",
+        "link": ""
+      },{
+        "dersAdi": "\"Vav\" Okutucusu Örnekleri",
+        "link": ""
+      },{
+        "dersAdi": "\"Ye\" Okutucusu Örnekleri",
+        "link": ""
+      }
+    ],
+    "renkler": {
+      "primary": "secondary",
+      "secondary": "secondaryContainer"
+    }
+  },
+  {
+    "konu": "Kef Harfi",
+    "icon": {
+      "rika": "kef_harfi_rika",
+      "matbu": "kef_harfi_matbu"
+    },
+    "dersler": [
+      {
+        "dersAdi": "Kâf-ı Arabî",
+        "link": ""
+      },
+      {
+        "dersAdi": "Kâf-ı Farisî",
+        "link": ""
+      },
+      {
+        "dersAdi": "Kâf-ı Nunî (Hazal Ne, Nef)",
+        "link": ""
+      },
+      {
+        "dersAdi": "Kâf-ı Yayî (Vavî)",
+        "link": ""
+      }
+    ],
+    "renkler": {
+      "primary": "tertiary",
+      "secondary": "tertiaryContainer"
+    }
+  },
+  {
+    "konu": "Kolay Okuma Kuralları",
+    "icon": {
+      "rika": "kolay_okuma_kuralları_rika",
+      "matbu": "kolay_okuma_kuralları_matbu"
+    },
+    "dersler": [
+      {
+        "dersAdi": "Okuma Kolaylığı Sağlayacak Bazı Kurallar",
+        "link": ""
+      },
+      {
+        "dersAdi": "Kelime İçinde Kalın Sesler",
+        "link": ""
+      },
+      {
+        "dersAdi": "Klişeleşmiş Bazı Kelimeler",
+        "link": ""
+      },
+      {
+        "dersAdi": "Türkçeye Yerleşmiş Bazı Arapça Kelimeler",
+        "link": ""
+      },
+      {
+        "dersAdi": "Türkçeye Yerleşmiş Bazı Farsça Kelimeler",
+        "link": ""
+      }
+    ],
+    "renkler": {
+      "primary": "fourth",
+      "secondary": "fourthContainer"
+    }
+  },
+  {
+    "konu": "Ekler",
+    "icon": {
+      "rika": "ekler_rika",
+      "matbu": "ekler_matbu"
+    },
+    "dersler": [
+      {
+        "dersAdi": "Kalın İnce Okunuşa Göre Yazılımı",
+        "link": ""
+      },
+      {
+        "dersAdi": "Kendisinden Sonraki Hafle Birleşmeyen Harfler",
+        "link": ""
+      }
+    ],
+    "renkler": {
+      "primary": "fifth",
+      "secondary": "fifthContainer"
+    }
+  },
+  {
+    "konu": "Atasözleri",
+    "icon": {
+      "rika": "atasözleri_rika",
+      "matbu": "atasözleri_matbu"
+    },
+    "dersler": [
+      {
+        "dersAdi": "Atasözleri 1",
+        "link": ""
+      },
+      {
+        "dersAdi": "Atasözleri 2",
+        "link": ""
+      },
+      {
+        "dersAdi": "Atasözleri 3",
+        "link": ""
+      },
+      {
+        "dersAdi": "Atasözleri 4",
+        "link": ""
+      }
+    ],
+    "renkler": {
+      "primary": "sixth",
+      "secondary": "sixthContainer"
+    }
+  }
+]
