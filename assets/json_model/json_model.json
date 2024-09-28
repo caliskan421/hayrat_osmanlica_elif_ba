@@ -102,8 +102,8 @@
   {
     "konu": "Kolay Okuma Kuralları",
     "icon": {
-      "rika": "kolay_okuma_kuralları_rika",
-      "matbu": "kolay_okuma_kuralları_matbu"
+      "rika": "kolay_okuma_kurallari_rika",
+      "matbu": "kolay_okuma_kurallari_matbu"
     },
     "dersler": [
       {
@@ -156,8 +156,8 @@
   {
     "konu": "Atasözleri",
     "icon": {
-      "rika": "atasözleri_rika",
-      "matbu": "atasözleri_matbu"
+      "rika": "atasozleri_rika",
+      "matbu": "atasozleri_matbu"
     },
     "dersler": [
       {

@@ -1,79 +1,64 @@
-import 'dart:convert';
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../../model/main_model.dart';
 import '../../../theme/light_theme.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import '../home_view_model.dart';
 
 class KonularListView extends StatelessWidget {
-  const KonularListView({super.key});
+  final ViewModel _viewModel = ViewModel();
+
+  KonularListView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    _viewModel.fetchKonular(context);
+    _viewModel.fetchKonuIconlar(context);
     return SizedBox(
       height: 106,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (cotext, index) {
-          return FutureBuilder(
-            future: readJson(cotext, index),
-            builder: (context, snapshot) {
-              if (snapshot.hasData) {
-                return Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: ConstrainedBox(
-                    constraints: const BoxConstraints(minWidth: 106, maxWidth: 140),
-                    child: Container(
-                      height: 106,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 10,
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.all(Radius.circular(10)),
-                        color: index == 0 ? AppColors.primary : AppColors.surface,
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          SvgPicture.asset(
-                            'assets/icons/okutucu_harfler_rika.svg',
-                            color:
-                                index == 0 ? AppColors.background : AppColors.onSurface,
-                            fit: BoxFit.none,
-                          ),
-                          Text(
-                            snapshot.data.toString(),
-                            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                color: index == 0
-                                    ? AppColors.background
-                                    : AppColors.outline),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                    ),
+      child: Observer(
+        builder: (_) => ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: _viewModel.konularList.length,
+          itemBuilder: (cotext, index) {
+            log("AAAAAAAAAA --> " + _viewModel.iconList.length.toString());
+            return Padding(
+              padding: const EdgeInsets.only(right: 8),
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(minWidth: 106, maxWidth: 140),
+                child: Container(
+                  height: 106,
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    color: index == 0 ? AppColors.primary : AppColors.surface,
                   ),
-                );
-              } else {
-                return const CircularProgressIndicator();
-              }
-            },
-          );
-        },
-        itemCount: 5,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      /// Konu LOGO
+                      SvgPicture.asset(
+                        'assets/icons/${_viewModel.iconList[index]}.svg',
+                        color: index == 0 ? AppColors.background : AppColors.onSurface,
+                        fit: BoxFit.none,
+                      ),
+
+                      /// Konu TITLE
+                      Text(
+                        _viewModel.konularList[index],
+                        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                            color: index == 0 ? AppColors.background : AppColors.outline),
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
       ),
     );
-  }
-
-  Future<String> readJson(BuildContext context, int index) async {
-    String value = await DefaultAssetBundle.of(context).loadString(
-      'assets/json_model/json_model.json',
-    );
-    var jsonObject = jsonDecode(value);
-    List<MainModel> list =
-        (jsonObject as List).map((item) => MainModel.fromJson(item)).toList();
-
-    return list[index].konu.toString();
   }
 }
