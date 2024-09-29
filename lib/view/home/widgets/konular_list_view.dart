@@ -6,10 +6,15 @@ import '../../../theme/light_theme.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import '../home_view_model.dart';
 
-class KonularListView extends StatelessWidget {
-  final ViewModel _viewModel = ViewModel();
+class KonularListView extends StatefulWidget {
+  const KonularListView({super.key});
 
-  KonularListView({super.key});
+  @override
+  State<KonularListView> createState() => _KonularListViewState();
+}
+
+class _KonularListViewState extends State<KonularListView> {
+  final ViewModel _viewModel = ViewModel();
 
   @override
   Widget build(BuildContext context) {
@@ -22,36 +27,54 @@ class KonularListView extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemCount: _viewModel.konularList.length,
           itemBuilder: (cotext, index) {
-            log("AAAAAAAAAA --> " + _viewModel.iconList.length.toString());
+            log(_viewModel.iconList[index].toString());
+            log('O->KONU Kist length ${_viewModel.konularList.length.toString()}');
             return Padding(
               padding: const EdgeInsets.only(right: 8),
-              child: ConstrainedBox(
-                constraints: const BoxConstraints(minWidth: 106, maxWidth: 140),
-                child: Container(
-                  height: 106,
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(10)),
-                    color: index == 0 ? AppColors.primary : AppColors.surface,
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      /// Konu LOGO
-                      SvgPicture.asset(
-                        'assets/icons/${_viewModel.iconList[index]}.svg',
-                        color: index == 0 ? AppColors.background : AppColors.onSurface,
-                        fit: BoxFit.none,
-                      ),
+              child: GestureDetector(
+                onTap: () {
+                  /// Todo --> Bastan build edilme sirasinda basa donuyor ve kisa suerlik gidip geliyor...
+                  _viewModel.konuIndex = index;
+                  setState(() {});
+                  log('S->KONU Kist length ${_viewModel.konularList.length.toString()}');
+                },
+                child: ConstrainedBox(
+                  constraints: const BoxConstraints(minWidth: 106, maxWidth: 140),
+                  child: Container(
+                    height: 106,
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                      color: index == _viewModel.konuIndex
+                          ? AppColors.primary
+                          : AppColors.surface,
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        SvgPicture.asset(
+                          'assets/icons/${_viewModel.iconList[index]}.svg',
 
-                      /// Konu TITLE
-                      Text(
-                        _viewModel.konularList[index],
-                        style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                            color: index == 0 ? AppColors.background : AppColors.outline),
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
+                          /// Todo --> change color with [Theme]...
+                          ///theme: SvgTheme(currentColor: index == 0 ? AppColors.background : AppColors.onSurface),
+
+                          color: index == _viewModel.konuIndex
+
+                              /// todo --> Color Json'dan cekilecek...
+                              ? AppColors.background
+                              : AppColors.onSurface,
+                          fit: BoxFit.none,
+                        ),
+                        Text(
+                          _viewModel.konularList[index],
+                          style: Theme.of(context).textTheme.headlineSmall!.copyWith(
+                              color: index == _viewModel.konuIndex
+                                  ? AppColors.background
+                                  : AppColors.outline),
+                          textAlign: TextAlign.center,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),

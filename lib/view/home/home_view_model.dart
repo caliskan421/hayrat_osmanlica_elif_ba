@@ -19,29 +19,56 @@ abstract class _ViewModelBase with Store {
   ObservableList<String> iconList = ObservableList<String>();
   @observable
   ObservableList<String> derslerList = ObservableList<String>();
+  @observable
+  bool isRika = true;
+  @observable
+  String appHat = 'rika';
+  @observable
+  int konuIndex = 0;
 
   @action
   Future<void> fetchKonular(BuildContext context) async {
-    for (int i = 0; i <= konularList.length; i++) {
-      String konu = await _konuService.fetchIconKonuTitle(context, i);
-      konularList.add(konu);
+    /// Todo [if-else] kontrolu olmadigi taktirde konulara tiklanildikca
+    /// eleman sayisi 6'sar olarak artiyor
+    /// Ustelik deger 12'den basliyor... (baslarken 2 kez build edilmesinden olabilir)
+    if (konularList.length != 6) {
+      for (int i = 0; i <= konularList.length; i++) {
+        String konu = await _konuService.fetchIconKonuTitle(context, i);
+        konularList.add(konu);
+      }
+    } else {
+      konularList.clear();
+
+      ///
+      for (int i = 0; i <= konularList.length; i++) {
+        String konu = await _konuService.fetchIconKonuTitle(context, i);
+        konularList.add(konu);
+      }
     }
   }
 
   @action
   Future<void> fetchKonuIconlar(BuildContext context) async {
     for (int i = 0; i <= konularList.length; i++) {
-      /// Todo --> ['riksa'] degeri sbt olmayacak...
-      String icon = await _iconService.fetchIcon(context, i, 'rika');
-      iconList.add(icon); // Alah cezani vermeye bes
+      String icon = await _iconService.fetchIcon(context, i, appHat);
+      iconList.add(icon);
     }
   }
 
   @action
   Future<void> fetchDersler(BuildContext context) async {
     for (int j = 0; j <= derslerList.length; j++) {
-      String ders = await _dersService.fetchDersTitle(context, 0, j);
+      ///ilk [int] parametre {konu listin} ikincisi ise {ders listin} <index> degeri
+      String ders = await _dersService.fetchDersTitle(context, konuIndex, j);
       derslerList.add(ders);
     }
+  }
+
+  @action
+  Future<void> changeAppHat(BuildContext context) async {
+    isRika = !isRika;
+    appHat = isRika ? appHat = 'rika' : appHat = 'matbu';
+
+    await fetchKonuIconlar(context);
   }
 }

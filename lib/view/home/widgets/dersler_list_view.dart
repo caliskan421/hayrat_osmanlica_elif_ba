@@ -5,22 +5,22 @@ import 'package:gap/gap.dart';
 import 'package:hayrat_osmanlica_elif_ba/view/home/home_view_model.dart';
 
 class DerslerListView extends StatelessWidget {
-  final ViewModel konuViewModel = ViewModel();
+  final ViewModel _viewModel = ViewModel();
 
   DerslerListView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    konuViewModel.fetchDersler(context);
+    _viewModel.fetchDersler(context);
     return Expanded(
       child: Observer(
         builder: (_) {
           return ListView.builder(
-            itemCount: konuViewModel.derslerList.length, // Ders listesi boyutunu kullan
+            itemCount: _viewModel.derslerList.length,
             itemBuilder: (context, index) {
               return FutureBuilder(
-                /// TODO --> {0} degeri [GestureDetector]'den gelecek...
-                future: DerslerService().fetchDersTitle(context, 0, index),
+                future:
+                    DerslerService().fetchDersTitle(context, _viewModel.konuIndex, index),
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     return Column(
@@ -30,7 +30,7 @@ class DerslerListView extends StatelessWidget {
                             const Gap(10),
                             Expanded(
                               child: Text(
-                                "${index + 1} ${konuViewModel.derslerList[index]}",
+                                "${index + 1} ${_viewModel.derslerList[index]}",
                                 style: Theme.of(context).textTheme.headlineMedium,
                               ),
                             ),

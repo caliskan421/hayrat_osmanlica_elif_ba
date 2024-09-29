@@ -1,13 +1,17 @@
 import 'dart:developer';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:hayrat_osmanlica_elif_ba/theme/light_theme.dart';
+import 'package:hayrat_osmanlica_elif_ba/view/home/home_view_model.dart';
 import 'package:hayrat_osmanlica_elif_ba/view/home/widgets/dersler_list_view.dart';
 import 'package:hayrat_osmanlica_elif_ba/view/home/widgets/konular_list_view.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  HomeView({super.key});
+
+  final ViewModel _viewModel = ViewModel();
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +25,16 @@ class HomeView extends StatelessWidget {
           const SizedBox(width: 20)
         ],
         leading: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: SvgPicture.asset('assets/icons/marka.svg'),
-        ),
+            padding: const EdgeInsets.only(left: 20),
+            child: Observer(builder: (_) {
+              return GestureDetector(
+                onTap: () async {
+                  await _viewModel.changeAppHat(context);
+                  log("HAT --> ${_viewModel.appHat}");
+                },
+                child: SvgPicture.asset('assets/icons/marka.svg'),
+              );
+            })),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
