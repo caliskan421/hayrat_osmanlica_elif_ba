@@ -41,19 +41,19 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
     });
   }
 
-  late final _$aktifDersAtom =
-      Atom(name: '_HomeViewModel.aktifDers', context: context);
+  late final _$aktifKonuIdAtom =
+      Atom(name: '_HomeViewModel.aktifKonuId', context: context);
 
   @override
-  DersModel? get aktifDers {
-    _$aktifDersAtom.reportRead();
-    return super.aktifDers;
+  int? get aktifKonuId {
+    _$aktifKonuIdAtom.reportRead();
+    return super.aktifKonuId;
   }
 
   @override
-  set aktifDers(DersModel? value) {
-    _$aktifDersAtom.reportWrite(value, super.aktifDers, () {
-      super.aktifDers = value;
+  set aktifKonuId(int? value) {
+    _$aktifKonuIdAtom.reportWrite(value, super.aktifKonuId, () {
+      super.aktifKonuId = value;
     });
   }
 
@@ -96,17 +96,6 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
   }
 
   @override
-  void aktifDersAta(dynamic index) {
-    final _$actionInfo = _$_HomeViewModelActionController.startAction(
-        name: '_HomeViewModel.aktifDersAta');
-    try {
-      return super.aktifDersAta(index);
-    } finally {
-      _$_HomeViewModelActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
   void setRika({bool? value}) {
     final _$actionInfo = _$_HomeViewModelActionController.startAction(
         name: '_HomeViewModel.setRika');
@@ -122,7 +111,7 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
     return '''
 konuList: ${konuList},
 aktifModel: ${aktifModel},
-aktifDers: ${aktifDers},
+aktifKonuId: ${aktifKonuId},
 isRika: ${isRika}
     ''';
   }

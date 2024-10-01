@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hayrat_osmanlica_elif_ba/theme/light_theme.dart';
 import 'package:hayrat_osmanlica_elif_ba/view/home/home_view.dart';
 
@@ -20,52 +21,58 @@ class DerslerListView extends StatelessWidget {
               bool aktifMi = aktifModel!.id == 1;
               final dersModel = konuModel!.dersler[index];
 
-              final aktifDers = homeViewModel.aktifDers;
-              //bool aktifMi = aktifDers!.id == 1;
               return Column(
                 children: [
                   Row(
                     children: [
                       const Gap(10),
                       Expanded(
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 32,
-                              height: 24,
-                              decoration: BoxDecoration(
-                                color: aktifMi
-                                    ? konuModel.renkler.primaryColor
-                                    : AppColors.background,
-                                borderRadius: const BorderRadius.all(Radius.circular(30)),
+                        child: GestureDetector(
+                          onTap: () {
+                            context.pushNamed('detail');
+                          },
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 32,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  color: aktifMi
+                                      ? konuModel.renkler.primaryColor
+                                      : AppColors.background,
+                                  borderRadius:
+                                      const BorderRadius.all(Radius.circular(30)),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    "${index + 1} ",
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium!
+                                        .copyWith(
+                                          color: aktifMi
+                                              ? AppColors.background
+                                              : AppColors.onSurface,
+                                        ),
+                                  ),
+                                ),
                               ),
-                              child: Center(
+                              const Gap(15),
+                              Expanded(
                                 child: Text(
-                                  "${index + 1} ",
+                                  dersModel.dersAdi,
                                   style: Theme.of(context)
                                       .textTheme
                                       .headlineMedium!
                                       .copyWith(
                                         color: aktifMi
-                                            ? AppColors.background
+                                            ? konuModel.renkler.primaryColor
                                             : AppColors.onSurface,
                                       ),
                                 ),
                               ),
-                            ),
-                            const Gap(15),
-                            Expanded(
-                              child: Text(
-                                dersModel.dersAdi,
-                                style:
-                                    Theme.of(context).textTheme.headlineMedium!.copyWith(
-                                          color: aktifMi
-                                              ? konuModel.renkler.primaryColor
-                                              : AppColors.onSurface,
-                                        ),
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ],
