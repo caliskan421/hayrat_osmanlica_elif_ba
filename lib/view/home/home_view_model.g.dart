@@ -8,86 +8,122 @@ part of 'home_view_model.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
-mixin _$ViewModel on _ViewModelBase, Store {
-  late final _$konularListAtom =
-      Atom(name: '_ViewModelBase.konularList', context: context);
+mixin _$HomeViewModel on _HomeViewModel, Store {
+  late final _$konuListAtom =
+      Atom(name: '_HomeViewModel.konuList', context: context);
 
   @override
-  ObservableList<String> get konularList {
-    _$konularListAtom.reportRead();
-    return super.konularList;
+  ObservableList<KonuModel> get konuList {
+    _$konuListAtom.reportRead();
+    return super.konuList;
   }
 
   @override
-  set konularList(ObservableList<String> value) {
-    _$konularListAtom.reportWrite(value, super.konularList, () {
-      super.konularList = value;
+  set konuList(ObservableList<KonuModel> value) {
+    _$konuListAtom.reportWrite(value, super.konuList, () {
+      super.konuList = value;
     });
   }
 
-  late final _$iconListAtom =
-      Atom(name: '_ViewModelBase.iconList', context: context);
+  late final _$aktifModelAtom =
+      Atom(name: '_HomeViewModel.aktifModel', context: context);
 
   @override
-  ObservableList<String> get iconList {
-    _$iconListAtom.reportRead();
-    return super.iconList;
+  KonuModel? get aktifModel {
+    _$aktifModelAtom.reportRead();
+    return super.aktifModel;
   }
 
   @override
-  set iconList(ObservableList<String> value) {
-    _$iconListAtom.reportWrite(value, super.iconList, () {
-      super.iconList = value;
+  set aktifModel(KonuModel? value) {
+    _$aktifModelAtom.reportWrite(value, super.aktifModel, () {
+      super.aktifModel = value;
     });
   }
 
-  late final _$derslerListAtom =
-      Atom(name: '_ViewModelBase.derslerList', context: context);
+  late final _$aktifDersAtom =
+      Atom(name: '_HomeViewModel.aktifDers', context: context);
 
   @override
-  ObservableList<String> get derslerList {
-    _$derslerListAtom.reportRead();
-    return super.derslerList;
+  DersModel? get aktifDers {
+    _$aktifDersAtom.reportRead();
+    return super.aktifDers;
   }
 
   @override
-  set derslerList(ObservableList<String> value) {
-    _$derslerListAtom.reportWrite(value, super.derslerList, () {
-      super.derslerList = value;
+  set aktifDers(DersModel? value) {
+    _$aktifDersAtom.reportWrite(value, super.aktifDers, () {
+      super.aktifDers = value;
     });
   }
 
-  late final _$fetchKonularAsyncAction =
-      AsyncAction('_ViewModelBase.fetchKonular', context: context);
+  late final _$isRikaAtom =
+      Atom(name: '_HomeViewModel.isRika', context: context);
 
   @override
-  Future<void> fetchKonular(BuildContext context) {
-    return _$fetchKonularAsyncAction.run(() => super.fetchKonular(context));
+  bool get isRika {
+    _$isRikaAtom.reportRead();
+    return super.isRika;
   }
 
-  late final _$fetchKonuIconlarAsyncAction =
-      AsyncAction('_ViewModelBase.fetchKonuIconlar', context: context);
-
   @override
-  Future<void> fetchKonuIconlar(BuildContext context) {
-    return _$fetchKonuIconlarAsyncAction
-        .run(() => super.fetchKonuIconlar(context));
+  set isRika(bool value) {
+    _$isRikaAtom.reportWrite(value, super.isRika, () {
+      super.isRika = value;
+    });
   }
 
-  late final _$fetchDerslerAsyncAction =
-      AsyncAction('_ViewModelBase.fetchDersler', context: context);
+  late final _$initAsyncAction =
+      AsyncAction('_HomeViewModel.init', context: context);
 
   @override
-  Future<void> fetchDersler(BuildContext context) {
-    return _$fetchDerslerAsyncAction.run(() => super.fetchDersler(context));
+  Future<void> init() {
+    return _$initAsyncAction.run(() => super.init());
+  }
+
+  late final _$_HomeViewModelActionController =
+      ActionController(name: '_HomeViewModel', context: context);
+
+  @override
+  void akitfKonuAta(dynamic index) {
+    final _$actionInfo = _$_HomeViewModelActionController.startAction(
+        name: '_HomeViewModel.akitfKonuAta');
+    try {
+      return super.akitfKonuAta(index);
+    } finally {
+      _$_HomeViewModelActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void aktifDersAta(dynamic index) {
+    final _$actionInfo = _$_HomeViewModelActionController.startAction(
+        name: '_HomeViewModel.aktifDersAta');
+    try {
+      return super.aktifDersAta(index);
+    } finally {
+      _$_HomeViewModelActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
+  void setRika({bool? value}) {
+    final _$actionInfo = _$_HomeViewModelActionController.startAction(
+        name: '_HomeViewModel.setRika');
+    try {
+      return super.setRika(value: value);
+    } finally {
+      _$_HomeViewModelActionController.endAction(_$actionInfo);
+    }
   }
 
   @override
   String toString() {
     return '''
-konularList: ${konularList},
-iconList: ${iconList},
-derslerList: ${derslerList}
+konuList: ${konuList},
+aktifModel: ${aktifModel},
+aktifDers: ${aktifDers},
+isRika: ${isRika}
     ''';
   }
 }

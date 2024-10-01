@@ -21,6 +21,27 @@ class AppColors {
   static const Color onSurface = Color(0xff000000);
   static const Color outline = Color(0xffB9B9B9);
   static const Color outlineVariant = Color(0xffF0F0F0);
+
+  static const Map<String, Color> colorMap = {
+    'primary': primary,
+    'primaryContainer': primaryContainer,
+    'background': background,
+    'secondary': secondary,
+    'secondaryContainer': secondaryContainer,
+    'tertiary': tertiary,
+    'tertiaryContainer': tertiaryContainer,
+    'fourth': fourth,
+    'fourthContainer': fourthContainer,
+    'fifth': fifth,
+    'fifthContainer': fifthContainer,
+    'sixth': sixth,
+    'sixthContainer': sixthContainer,
+    'surface': surface,
+    'surfaceBright': surfaceBright,
+    'onSurface': onSurface,
+    'outline': outline,
+    'outlineVariant': outlineVariant,
+  };
 }
 
 final lightTheme = ThemeData(

@@ -6,7 +6,7 @@ final router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
-      name: '/',
+      name: 'home',
       builder: (context, state) => HomeView(),
     ),
   ],

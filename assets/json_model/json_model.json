@@ -1,188 +1,184 @@
 [
   {
-    "konu": "Harfler",
-    "icon": {
-      "rika": "harfler_rika",
-      "matbu": "harfler_matbu"
+    "id": 1,
+    "konu_title": "Harfler",
+    "rika": "harfler_rika",
+    "matbu": "harfler_matbu",
+    "renkler": {
+      "primary_color": "primary",
+      "secondary_color": "primaryContainer"
     },
     "dersler": [
       {
-        "dersAdi": "Osmanlı Türkçesinde Bulunan Harfler",
-        "link": ""
+        "id": 1,
+        "dersAdi": "Osmanlı Türkçesinde Bulunan Harfler"
+
       },
       {
-        "dersAdi": "Harflerin Rik’a Hattı Yazılışları",
-        "link": ""
+        "id": 2,
+        "dersAdi": "Harflerin Rik’a Hattı Yazılışları"
       },
       {
-        "dersAdi": "Harflerin Birleşim Halleri",
-        "link": ""
+        "id": 3,
+        "dersAdi": "Harflerin Birleşim Halleri"
       },
       {
-        "dersAdi": "Rakamlar ve Sayılar",
-        "link": ""
+        "id": 4,
+        "dersAdi": "Rakamlar ve Sayılar"
       }
-    ],
-    "renkler": {
-      "primary": "primary",
-      "secondary": "primaryContainer"
-    }
+    ]
   },
   {
-    "konu": "Okutucu Harfler",
-    "icon": {
-      "rika": "okutucu_harfler_rika",
-      "matbu": "okutucu_harfler_matbu"
+    "id": 2,
+    "konu_title": "Okutucu Harfler",
+    "rika": "okutucu_harfler_rika",
+    "matbu": "okutucu_harfler_matbu",
+    "renkler": {
+      "primary_color": "secondary",
+      "secondary_color": "secondaryContainer"
     },
     "dersler": [
       {
-        "dersAdi": "Osmanlıca Okutucu Harfler",
-        "link": ""
+        "id": 1,
+        "dersAdi": "Osmanlıca Okutucu Harfler"
       },
       {
-        "dersAdi": "\"Elif\" Okutucusu Örnekleri",
-        "link": ""
+        "id": 2,
+        "dersAdi": "\"Elif\" Okutucusu Örnekleri"
       },
       {
-        "dersAdi": "\"He\" Okutucusunun A Sesiyle Okuttuğu Yerler",
-        "link": ""
+        "id": 3,
+        "dersAdi": "\"He\" Okutucusunun A Sesiyle Okuttuğu Yerler"
       },
       {
-        "dersAdi": "\"He\" Okutucusu Örnekleri",
-        "link": ""
+        "id": 4,
+        "dersAdi": "\"He\" Okutucusu Örnekleri"
       },
       {
-        "dersAdi": "Kalın ve İnce Karşılığı Olan Harfler",
-        "link": ""
+        "id": 5,
+        "dersAdi": "Kalın ve İnce Karşılığı Olan Harfler"
       },
       {
-        "dersAdi": "Siyak-Sibak Meselesi",
-        "link": ""
+        "id": 6,
+        "dersAdi": "Siyak-Sibak Meselesi"
       },
       {
-        "dersAdi": "\"Vav\" Okutucusu Örnekleri",
-        "link": ""
+        "id": 7,
+        "dersAdi": "\"Vav\" Okutucusu Örnekleri"
       },
       {
-        "dersAdi": "\"Ye\" Okutucusu Örnekleri",
-        "link": ""
+        "id": 8,
+        "dersAdi": "\"Ye\" Okutucusu Örnekleri"
       }
-    ],
-    "renkler": {
-      "primary": "secondary",
-      "secondary": "secondaryContainer"
-    }
+    ]
+
   },
   {
-    "konu": "Kef Harfi",
-    "icon": {
-      "rika": "kef_harfi_rika",
-      "matbu": "kef_harfi_matbu"
+    "id": 3,
+    "konu_title": "Kef Harfi",
+    "rika": "kef_harfi_rika",
+    "matbu": "kef_harfi_matbu",
+    "renkler": {
+      "primary_color": "tertiary",
+      "secondary_color": "tertiaryContainer"
     },
     "dersler": [
       {
-        "dersAdi": "Kâf-ı Arabî",
-        "link": ""
+        "id": 1,
+        "dersAdi": "Kâf-ı Arabî"
       },
       {
-        "dersAdi": "Kâf-ı Farisî",
-        "link": ""
+        "id": 2,
+        "dersAdi": "Kâf-ı Farisî"
       },
       {
-        "dersAdi": "Kâf-ı Nunî (Hazal Ne, Nef)",
-        "link": ""
+        "id": 3,
+        "dersAdi": "Kâf-ı Nunî (Hazal Ne, Nef)"
       },
       {
-        "dersAdi": "Kâf-ı Yayî (Vavî)",
-        "link": ""
+        "id": 4,
+        "dersAdi": "Kâf-ı Yayî (Vavî)"
       }
-    ],
-    "renkler": {
-      "primary": "tertiary",
-      "secondary": "tertiaryContainer"
-    }
+    ]
   },
   {
-    "konu": "Kolay Okuma Kuralları",
-    "icon": {
-      "rika": "kolay_okuma_kurallari_rika",
-      "matbu": "kolay_okuma_kurallari_matbu"
+    "id": 4,
+    "konu_title": "Kolay Okuma Kuralları",
+    "rika": "kolay_okuma_kurallari_rika",
+    "matbu": "kolay_okuma_kurallari_matbu",
+    "renkler": {
+      "primary_color": "fourth",
+      "secondary_color": "fourthContainer"
     },
     "dersler": [
       {
-        "dersAdi": "Okuma Kolaylığı Sağlayacak Bazı Kurallar",
-        "link": ""
+        "id": 1,
+        "dersAdi": "Okuma Kolaylığı Sağlayacak Bazı Kurallar"
       },
       {
-        "dersAdi": "Kelime İçinde Kalın Sesler",
-        "link": ""
+        "id": 2,
+        "dersAdi": "Kelime İçinde Kalın Sesler"
       },
       {
-        "dersAdi": "Klişeleşmiş Bazı Kelimeler",
-        "link": ""
+        "id": 3,
+        "dersAdi": "Klişeleşmiş Bazı Kelimeler"
       },
       {
-        "dersAdi": "Türkçeye Yerleşmiş Bazı Arapça Kelimeler",
-        "link": ""
+        "id": 4,
+        "dersAdi": "Türkçeye Yerleşmiş Bazı Arapça Kelimeler"
       },
       {
-        "dersAdi": "Türkçeye Yerleşmiş Bazı Farsça Kelimeler",
-        "link": ""
+        "id": 5,
+        "dersAdi": "Türkçeye Yerleşmiş Bazı Farsça Kelimeler"
       }
-    ],
-    "renkler": {
-      "primary": "fourth",
-      "secondary": "fourthContainer"
-    }
+    ]
   },
   {
-    "konu": "Ekler",
-    "icon": {
-      "rika": "ekler_rika",
-      "matbu": "ekler_matbu"
+    "id": 5,
+    "konu_title": "Ekler",
+    "rika": "ekler_rika",
+    "matbu": "ekler_matbu",
+    "renkler": {
+      "primary_color": "fifth",
+      "secondary_color": "fifthContainer"
     },
     "dersler": [
       {
-        "dersAdi": "Kalın İnce Okunuşa Göre Yazılımı",
-        "link": ""
+        "id": 1,
+        "dersAdi": "Kalın İnce Okunuşa Göre Yazılımı"
       },
       {
-        "dersAdi": "Kendisinden Sonraki Hafle Birleşmeyen Harfler",
-        "link": ""
+        "id": 2,
+        "dersAdi": "Kendisinden Sonraki Hafle Birleşmeyen Harfler"
       }
-    ],
-    "renkler": {
-      "primary": "fifth",
-      "secondary": "fifthContainer"
-    }
+    ]
   },
   {
-    "konu": "Atasözleri",
-    "icon": {
-      "rika": "atasozleri_rika",
-      "matbu": "atasozleri_matbu"
+    "id": 6,
+    "konu_title": "Atasözleri",
+    "rika": "atasozleri_rika",
+    "matbu": "atasozleri_matbu",
+    "renkler": {
+      "primary_color": "sixth",
+      "secondary_color": "sixthContainer"
     },
     "dersler": [
       {
-        "dersAdi": "Atasözleri 1",
-        "link": ""
+        "id": 1,
+        "dersAdi": "Atasözleri 1"
       },
       {
-        "dersAdi": "Atasözleri 2",
-        "link": ""
+        "id": 2,
+        "dersAdi": "Atasözleri 2"
       },
       {
-        "dersAdi": "Atasözleri 3",
-        "link": ""
+        "id": 3,
+        "dersAdi": "Atasözleri 3"
       },
       {
-        "dersAdi": "Atasözleri 4",
-        "link": ""
+        "id": 4,
+        "dersAdi": "Atasözleri 4"
       }
-    ],
-    "renkler": {
-      "primary": "sixth",
-      "secondary": "sixthContainer"
-    }
+    ]
   }
 ]

@@ -1,74 +1,106 @@
-import 'package:flutter/material.dart';
-import 'package:hayrat_osmanlica_elif_ba/service/dersler_service.dart';
-import 'package:hayrat_osmanlica_elif_ba/service/konu_icon_service.dart';
-import 'package:hayrat_osmanlica_elif_ba/service/konu_service.dart';
+import 'package:hayrat_osmanlica_elif_ba/model/ders_model.dart';
 import 'package:mobx/mobx.dart';
+
+import '../../model/konu_model.dart';
+import '../../service/konu_model_list_service.dart';
 
 part 'home_view_model.g.dart';
 
-class ViewModel = _ViewModelBase with _$ViewModel;
+class HomeViewModel = _HomeViewModel with _$HomeViewModel;
 
-abstract class _ViewModelBase with Store {
-  final KonularService _konuService = KonularService();
-  final DerslerService _dersService = DerslerService();
-  final KonuIconService _iconService = KonuIconService();
+abstract class _HomeViewModel with Store {
+  final KonuModelListService _konuListService = KonuModelListService();
 
   @observable
-  ObservableList<String> konularList = ObservableList<String>();
+  ObservableList<KonuModel> konuList = ObservableList.of([]);
+
   @observable
-  ObservableList<String> iconList = ObservableList<String>();
+  KonuModel? aktifModel;
+
   @observable
-  ObservableList<String> derslerList = ObservableList<String>();
+  DersModel? aktifDers;
+
   @observable
-  bool isRika = true;
+  int? aktifKonuId = 0;
+
   @observable
-  String appHat = 'rika';
-  @observable
-  int konuIndex = 0;
+  bool isRika = false;
 
   @action
-  Future<void> fetchKonular(BuildContext context) async {
-    /// Todo [if-else] kontrolu olmadigi taktirde konulara tiklanildikca
-    /// eleman sayisi 6'sar olarak artiyor
-    /// Ustelik deger 12'den basliyor... (baslarken 2 kez build edilmesinden olabilir)
-    if (konularList.length != 6) {
-      for (int i = 0; i <= konularList.length; i++) {
-        String konu = await _konuService.fetchIconKonuTitle(context, i);
-        konularList.add(konu);
-      }
-    } else {
-      konularList.clear();
-
-      ///
-      for (int i = 0; i <= konularList.length; i++) {
-        String konu = await _konuService.fetchIconKonuTitle(context, i);
-        konularList.add(konu);
-      }
-    }
+  Future<void> init() async {
+    konuList.clear();
+    aktifModel == null;
+    aktifDers == null;
+    // kullanıcı tercihi hatırlanması lazım
+    isRika = false;
+    final res = await _konuListService.fetchKonularFromJson();
+    konuList.addAll(ObservableList.of(res));
+    // kullanıcının son tıkladığını kaydetip burda ataman lazım.
+    aktifModel = konuList.first;
+    aktifDers = konuList[aktifKonuId!].dersler.first;
   }
 
   @action
-  Future<void> fetchKonuIconlar(BuildContext context) async {
-    for (int i = 0; i <= konularList.length; i++) {
-      String icon = await _iconService.fetchIcon(context, i, appHat);
-      iconList.add(icon);
-    }
+  void akitfKonuAta(index) {
+    aktifModel = konuList[index];
   }
 
   @action
-  Future<void> fetchDersler(BuildContext context) async {
-    for (int j = 0; j <= derslerList.length; j++) {
-      ///ilk [int] parametre {konu listin} ikincisi ise {ders listin} <index> degeri
-      String ders = await _dersService.fetchDersTitle(context, konuIndex, j);
-      derslerList.add(ders);
-    }
+  void aktifDersAta(index) {
+    aktifDers = konuList[aktifKonuId!].dersler[index];
   }
 
   @action
-  Future<void> changeAppHat(BuildContext context) async {
-    isRika = !isRika;
-    appHat = isRika ? appHat = 'rika' : appHat = 'matbu';
-
-    await fetchKonuIconlar(context);
+  void setRika({bool? value}) {
+    isRika = value ?? !isRika;
   }
+
+//
+// @observable
+// ObservableList<String> konularTitleList = ObservableList<String>();
+// @observable
+// ObservableList<String> konularIconList = ObservableList<String>();
+// @observable
+// ObservableList<String> derslerTitleList = ObservableList<String>();
+// @observable
+// bool isRika = true;
+// @observable
+// String appHat = 'rika';
+// @observable
+// int konuIndex = 0;
+//
+// @observable
+// KonuModel? aktifKonuModel;
+//
+// @action
+// Future<void> fetchKonuTitle(BuildContext context) async {
+//   for (int i = 0; i <= konularTitleList.length; i++) {
+//     _konuService.fetchKonuTitleService(context, i);
+//   }
+// }
+//
+// @action
+// Future<void> fetchKonuIcon(BuildContext context) async {
+//   for (int i = 0; i < konularTitleList.length; i++) {
+//     String icon = await _iconService.fetchKonuIconService(context, i, appHat);
+//     konularIconList.add(icon);
+//   }
+// }
+//
+// @action
+// Future<void> fetchDerslerTitle(BuildContext context) async {
+//   for (int j = 0; j <= derslerTitleList.length; j++) {
+//     ///ilk [int] parametre {konu listin} ikincisi ise {ders listin} <index> degeri
+//     String ders = await _dersService.fetchDersTitle(context, konuIndex, j);
+//     derslerTitleList.add(ders);
+//   }
+// }
+//
+// @action
+// Future<void> changeAppHat(BuildContext context) async {
+//   isRika = !isRika;
+//   appHat = isRika ? appHat = 'rika' : appHat = 'matbu';
+//
+//   await fetchKonuIcon(context);
+// }
 }

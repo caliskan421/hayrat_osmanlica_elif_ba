@@ -1,51 +1,80 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:hayrat_osmanlica_elif_ba/service/dersler_service.dart';
 import 'package:gap/gap.dart';
-import 'package:hayrat_osmanlica_elif_ba/view/home/home_view_model.dart';
+import 'package:hayrat_osmanlica_elif_ba/theme/light_theme.dart';
+import 'package:hayrat_osmanlica_elif_ba/view/home/home_view.dart';
 
 class DerslerListView extends StatelessWidget {
-  final ViewModel _viewModel = ViewModel();
-
-  DerslerListView({super.key});
+  const DerslerListView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    _viewModel.fetchDersler(context);
     return Expanded(
       child: Observer(
         builder: (_) {
+          final konuModel = homeViewModel.aktifModel;
           return ListView.builder(
-            itemCount: _viewModel.derslerList.length,
+            itemCount: konuModel?.dersler.length ?? 0,
             itemBuilder: (context, index) {
-              return FutureBuilder(
-                future:
-                    DerslerService().fetchDersTitle(context, _viewModel.konuIndex, index),
-                builder: (context, snapshot) {
-                  if (snapshot.hasData) {
-                    return Column(
-                      children: [
-                        Row(
+              final aktifModel = homeViewModel.aktifModel;
+              bool aktifMi = aktifModel!.id == 1;
+              final dersModel = konuModel!.dersler[index];
+
+              final aktifDers = homeViewModel.aktifDers;
+              //bool aktifMi = aktifDers!.id == 1;
+              return Column(
+                children: [
+                  Row(
+                    children: [
+                      const Gap(10),
+                      Expanded(
+                        child: Row(
                           children: [
-                            const Gap(10),
+                            Container(
+                              width: 32,
+                              height: 24,
+                              decoration: BoxDecoration(
+                                color: aktifMi
+                                    ? konuModel.renkler.primaryColor
+                                    : AppColors.background,
+                                borderRadius: const BorderRadius.all(Radius.circular(30)),
+                              ),
+                              child: Center(
+                                child: Text(
+                                  "${index + 1} ",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium!
+                                      .copyWith(
+                                        color: aktifMi
+                                            ? AppColors.background
+                                            : AppColors.onSurface,
+                                      ),
+                                ),
+                              ),
+                            ),
+                            const Gap(15),
                             Expanded(
                               child: Text(
-                                "${index + 1} ${_viewModel.derslerList[index]}",
-                                style: Theme.of(context).textTheme.headlineMedium,
+                                dersModel.dersAdi,
+                                style:
+                                    Theme.of(context).textTheme.headlineMedium!.copyWith(
+                                          color: aktifMi
+                                              ? konuModel.renkler.primaryColor
+                                              : AppColors.onSurface,
+                                        ),
                               ),
                             ),
                           ],
                         ),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 10),
-                          child: Divider(),
-                        ),
-                      ],
-                    );
-                  } else {
-                    return const CircularProgressIndicator();
-                  }
-                },
+                      ),
+                    ],
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: Divider(),
+                  ),
+                ],
               );
             },
           );
