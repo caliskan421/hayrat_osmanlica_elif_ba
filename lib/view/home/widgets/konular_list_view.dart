@@ -1,9 +1,8 @@
-import 'dart:developer';
-
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../../theme/light_theme.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import '../home_view.dart';
 
 class KonularListView extends StatelessWidget {
@@ -15,7 +14,7 @@ class KonularListView extends StatelessWidget {
       height: 106,
       child: Observer(
         builder: (_) {
-          final aktifModel = homeViewModel.aktifModel;
+          final aktifModel = homeViewModel.aktifKonuModel;
 
           return ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -30,17 +29,19 @@ class KonularListView extends StatelessWidget {
                   onTap: () {
                     homeViewModel.akitfKonuAta(index);
                     homeViewModel.aktifKonuId = index + 1;
-                    log(homeViewModel.aktifKonuId.toString());
                   },
                   child: ConstrainedBox(
                     constraints: const BoxConstraints(minWidth: 106, maxWidth: 140),
                     child: Container(
                       height: 106,
+
+                      /// Todo --> Kutu boyutlarını düzenle...
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       decoration: BoxDecoration(
                         borderRadius: const BorderRadius.all(Radius.circular(10)),
-                        color:
-                            aktifmi ? konuModel.renkler.primaryColor : AppColors.surface,
+                        color: aktifmi
+                            ? konuModel.renkler.primaryColor
+                            : AppColors.surfaceBright,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -55,15 +56,8 @@ class KonularListView extends StatelessWidget {
 
                             return SvgPicture.asset(
                               'assets/icons/$icon.svg',
-
-                              /// Todo --> change color with [Theme]...
-                              ///theme: SvgTheme(currentColor: index == 0 ? AppColors.background : AppColors.onSurface),
-
-                              color: aktifmi
-
-                                  /// todo --> Color Json'dan cekilecek...
-                                  ? AppColors.background
-                                  : AppColors.onSurface,
+                              // Todo --> change color with [Theme]...
+                              color: aktifmi ? AppColors.background : AppColors.onSurface,
                               fit: BoxFit.none,
                             );
                           }),

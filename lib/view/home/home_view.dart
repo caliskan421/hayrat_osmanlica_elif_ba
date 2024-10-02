@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:hayrat_osmanlica_elif_ba/theme/light_theme.dart';
-import 'package:hayrat_osmanlica_elif_ba/view/home/home_view_model.dart';
-import 'package:hayrat_osmanlica_elif_ba/view/home/widgets/dersler_list_view.dart';
-import 'package:hayrat_osmanlica_elif_ba/view/home/widgets/konular_list_view.dart';
+
+import 'home_view_model.dart';
+import 'widgets/dersler_list_view.dart';
+import 'widgets/konular_list_view.dart';
 
 final HomeViewModel homeViewModel = HomeViewModel();
 
@@ -25,9 +25,7 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
       appBar: AppBar(
-        backgroundColor: AppColors.background,
         actions: [
           SvgPicture.asset('assets/icons/menu.svg', width: 24),
           const SizedBox(width: 20)
@@ -36,7 +34,12 @@ class _HomeViewState extends State<HomeView> {
           padding: const EdgeInsets.only(left: 20),
           child: GestureDetector(
             onTap: homeViewModel.setRika,
-            child: SvgPicture.asset('assets/icons/marka.svg'),
+            child: SvgPicture.asset(
+              'assets/icons/marka.svg',
+
+              /// Todo --> Svg boyutunu ayarla
+              width: 50,
+            ),
           ),
         ),
       ),

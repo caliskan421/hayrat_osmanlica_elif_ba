@@ -10,8 +10,8 @@ class TextStyles {
       textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.w600));
   static TextStyle headlinaLarde = GoogleFonts.poppins(
       textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600));
-  static TextStyle headlineMedium = GoogleFonts.poppins(
-      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500));
+  static TextStyle headlineMedium = GoogleFonts.readexPro(
+      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400));
   static TextStyle headlineSmall = GoogleFonts.poppins(
       textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500));
   static TextStyle bodyLarge = GoogleFonts.poppins(

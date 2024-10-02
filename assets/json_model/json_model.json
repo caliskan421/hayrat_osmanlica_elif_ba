@@ -39,35 +39,35 @@
     },
     "dersler": [
       {
-        "id": 1,
+        "id": 5,
         "dersAdi": "Osmanlıca Okutucu Harfler"
       },
       {
-        "id": 2,
+        "id": 6,
         "dersAdi": "\"Elif\" Okutucusu Örnekleri"
       },
       {
-        "id": 3,
+        "id": 7,
         "dersAdi": "\"He\" Okutucusunun A Sesiyle Okuttuğu Yerler"
       },
       {
-        "id": 4,
+        "id": 8,
         "dersAdi": "\"He\" Okutucusu Örnekleri"
       },
       {
-        "id": 5,
+        "id": 9,
         "dersAdi": "Kalın ve İnce Karşılığı Olan Harfler"
       },
       {
-        "id": 6,
+        "id": 10,
         "dersAdi": "Siyak-Sibak Meselesi"
       },
       {
-        "id": 7,
+        "id": 11,
         "dersAdi": "\"Vav\" Okutucusu Örnekleri"
       },
       {
-        "id": 8,
+        "id": 12,
         "dersAdi": "\"Ye\" Okutucusu Örnekleri"
       }
     ]
@@ -84,19 +84,19 @@
     },
     "dersler": [
       {
-        "id": 1,
+        "id": 13,
         "dersAdi": "Kâf-ı Arabî"
       },
       {
-        "id": 2,
+        "id": 14,
         "dersAdi": "Kâf-ı Farisî"
       },
       {
-        "id": 3,
+        "id": 15,
         "dersAdi": "Kâf-ı Nunî (Hazal Ne, Nef)"
       },
       {
-        "id": 4,
+        "id": 16,
         "dersAdi": "Kâf-ı Yayî (Vavî)"
       }
     ]
@@ -112,23 +112,23 @@
     },
     "dersler": [
       {
-        "id": 1,
+        "id": 17,
         "dersAdi": "Okuma Kolaylığı Sağlayacak Bazı Kurallar"
       },
       {
-        "id": 2,
+        "id": 18,
         "dersAdi": "Kelime İçinde Kalın Sesler"
       },
       {
-        "id": 3,
+        "id": 19,
         "dersAdi": "Klişeleşmiş Bazı Kelimeler"
       },
       {
-        "id": 4,
+        "id": 20,
         "dersAdi": "Türkçeye Yerleşmiş Bazı Arapça Kelimeler"
       },
       {
-        "id": 5,
+        "id": 21,
         "dersAdi": "Türkçeye Yerleşmiş Bazı Farsça Kelimeler"
       }
     ]
@@ -144,11 +144,11 @@
     },
     "dersler": [
       {
-        "id": 1,
+        "id": 22,
         "dersAdi": "Kalın İnce Okunuşa Göre Yazılımı"
       },
       {
-        "id": 2,
+        "id": 23,
         "dersAdi": "Kendisinden Sonraki Hafle Birleşmeyen Harfler"
       }
     ]
@@ -164,19 +164,19 @@
     },
     "dersler": [
       {
-        "id": 1,
+        "id": 24,
         "dersAdi": "Atasözleri 1"
       },
       {
-        "id": 2,
+        "id": 25,
         "dersAdi": "Atasözleri 2"
       },
       {
-        "id": 3,
+        "id": 26,
         "dersAdi": "Atasözleri 3"
       },
       {
-        "id": 4,
+        "id": 27,
         "dersAdi": "Atasözleri 4"
       }
     ]

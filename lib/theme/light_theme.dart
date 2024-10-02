@@ -45,7 +45,8 @@ class AppColors {
 }
 
 final lightTheme = ThemeData(
-  //fontFamily: ,
+  scaffoldBackgroundColor: AppColors.background,
+  appBarTheme: const AppBarTheme(backgroundColor: AppColors.background),
   textTheme: TextTheme(
     titleLarge: TextStyles.titleLarge,
     titleMedium: TextStyles.titleMedium,

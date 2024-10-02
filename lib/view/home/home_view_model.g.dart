@@ -9,8 +9,7 @@ part of 'home_view_model.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$HomeViewModel on _HomeViewModel, Store {
-  late final _$konuListAtom =
-      Atom(name: '_HomeViewModel.konuList', context: context);
+  late final _$konuListAtom = Atom(name: '_HomeViewModel.konuList', context: context);
 
   @override
   ObservableList<KonuModel> get konuList {
@@ -25,19 +24,18 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
     });
   }
 
-  late final _$aktifModelAtom =
-      Atom(name: '_HomeViewModel.aktifModel', context: context);
+  late final _$aktifModelAtom = Atom(name: '_HomeViewModel.aktifModel', context: context);
 
   @override
-  KonuModel? get aktifModel {
+  KonuModel? get aktifKonuModel {
     _$aktifModelAtom.reportRead();
-    return super.aktifModel;
+    return super.aktifKonuModel;
   }
 
   @override
-  set aktifModel(KonuModel? value) {
-    _$aktifModelAtom.reportWrite(value, super.aktifModel, () {
-      super.aktifModel = value;
+  set aktifKonuModel(KonuModel? value) {
+    _$aktifModelAtom.reportWrite(value, super.aktifKonuModel, () {
+      super.aktifKonuModel = value;
     });
   }
 
@@ -57,8 +55,7 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
     });
   }
 
-  late final _$isRikaAtom =
-      Atom(name: '_HomeViewModel.isRika', context: context);
+  late final _$isRikaAtom = Atom(name: '_HomeViewModel.isRika', context: context);
 
   @override
   bool get isRika {
@@ -73,34 +70,30 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
     });
   }
 
-  late final _$initAsyncAction =
-      AsyncAction('_HomeViewModel.init', context: context);
+  late final _$initAsyncAction = AsyncAction('_HomeViewModel.init', context: context);
 
   @override
   Future<void> init() {
     return _$initAsyncAction.run(() => super.init());
   }
 
+  late final _$setRikaAsyncAction =
+      AsyncAction('_HomeViewModel.setRika', context: context);
+
+  @override
+  Future<void> setRika() {
+    return _$setRikaAsyncAction.run(() => super.setRika());
+  }
+
   late final _$_HomeViewModelActionController =
       ActionController(name: '_HomeViewModel', context: context);
 
   @override
-  void akitfKonuAta(dynamic index) {
-    final _$actionInfo = _$_HomeViewModelActionController.startAction(
-        name: '_HomeViewModel.akitfKonuAta');
+  void akitfKonuAta(int index) {
+    final _$actionInfo =
+        _$_HomeViewModelActionController.startAction(name: '_HomeViewModel.akitfKonuAta');
     try {
       return super.akitfKonuAta(index);
-    } finally {
-      _$_HomeViewModelActionController.endAction(_$actionInfo);
-    }
-  }
-
-  @override
-  void setRika({bool? value}) {
-    final _$actionInfo = _$_HomeViewModelActionController.startAction(
-        name: '_HomeViewModel.setRika');
-    try {
-      return super.setRika(value: value);
     } finally {
       _$_HomeViewModelActionController.endAction(_$actionInfo);
     }
@@ -110,7 +103,7 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
   String toString() {
     return '''
 konuList: ${konuList},
-aktifModel: ${aktifModel},
+aktifModel: ${aktifKonuModel},
 aktifKonuId: ${aktifKonuId},
 isRika: ${isRika}
     ''';

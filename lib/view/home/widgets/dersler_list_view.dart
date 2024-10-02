@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
-import 'package:hayrat_osmanlica_elif_ba/theme/light_theme.dart';
-import 'package:hayrat_osmanlica_elif_ba/view/home/home_view.dart';
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+
+import '../../../theme/light_theme.dart';
+import '../home_view.dart';
 
 class DerslerListView extends StatelessWidget {
   const DerslerListView({super.key});
@@ -13,14 +14,14 @@ class DerslerListView extends StatelessWidget {
     return Expanded(
       child: Observer(
         builder: (_) {
-          final konuModel = homeViewModel.aktifModel;
+          final konuModel = homeViewModel.aktifKonuModel;
           return ListView.builder(
             itemCount: konuModel?.dersler.length ?? 0,
             itemBuilder: (context, index) {
-              final aktifModel = homeViewModel.aktifModel;
-              bool aktifMi = aktifModel!.id == 1;
+              final aktifModel = homeViewModel.aktifKonuModel;
               final dersModel = konuModel!.dersler[index];
-
+              bool isActiveDers =
+                  aktifModel!.dersler[index].id == homeViewModel.aktifDersId;
               return Column(
                 children: [
                   Row(
@@ -29,7 +30,10 @@ class DerslerListView extends StatelessWidget {
                       Expanded(
                         child: GestureDetector(
                           onTap: () {
-                            context.pushNamed('detail');
+                            homeViewModel.aktifDersAta(index);
+                            context.pushNamed(
+                              'detail',
+                            );
                           },
                           child: Row(
                             children: [
@@ -37,7 +41,7 @@ class DerslerListView extends StatelessWidget {
                                 width: 32,
                                 height: 24,
                                 decoration: BoxDecoration(
-                                  color: aktifMi
+                                  color: isActiveDers
                                       ? konuModel.renkler.primaryColor
                                       : AppColors.background,
                                   borderRadius:
@@ -45,12 +49,12 @@ class DerslerListView extends StatelessWidget {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    "${index + 1} ",
+                                    "${index + 1}",
                                     style: Theme.of(context)
                                         .textTheme
                                         .headlineMedium!
                                         .copyWith(
-                                          color: aktifMi
+                                          color: isActiveDers
                                               ? AppColors.background
                                               : AppColors.onSurface,
                                         ),
@@ -65,7 +69,7 @@ class DerslerListView extends StatelessWidget {
                                       .textTheme
                                       .headlineMedium!
                                       .copyWith(
-                                        color: aktifMi
+                                        color: isActiveDers
                                             ? konuModel.renkler.primaryColor
                                             : AppColors.onSurface,
                                       ),
@@ -79,7 +83,7 @@ class DerslerListView extends StatelessWidget {
                   ),
                   const Padding(
                     padding: EdgeInsets.symmetric(vertical: 10),
-                    child: Divider(),
+                    child: Divider(color: AppColors.outlineVariant),
                   ),
                 ],
               );
