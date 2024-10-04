@@ -1,14 +1,17 @@
-import 'package:hayrat_osmanlica_elif_ba/model/ders_model.dart';
+import 'dart:developer';
+
 import 'package:mobx/mobx.dart';
 
 /// Model
 import '../../model/konu_model.dart';
+import '../../model/ders_model.dart';
 
 /// Service
-import '../../service/ders_state_servcice.dart';
-import '../../service/hat_state_service.dart';
 import '../../service/konu_model_list_service.dart';
 import '../../service/konu_state_serive.dart';
+import '../../service/ders_model_list_service.dart';
+import '../../service/ders_state_servcice.dart';
+import '../../service/hat_state_service.dart';
 
 part 'home_view_model.g.dart';
 
@@ -19,9 +22,12 @@ abstract class _HomeViewModel with Store {
   final HatStateService _hatStateService = HatStateService();
   final KonuStateService _konuStateService = KonuStateService();
   final DersStateService _dersStateService = DersStateService();
+  final DersModelListService _dersListService = DersModelListService();
 
   @observable
   ObservableList<KonuModel> konuList = ObservableList.of([]);
+  @observable
+  ObservableList<DersModel> aktifDersList = ObservableList.of([]);
 
   @observable
   KonuModel? aktifKonuModel;
@@ -50,15 +56,18 @@ abstract class _HomeViewModel with Store {
   }
 
   @action
-  void akitfKonuAta(int index) {
+  void akitfKonuAta(int index) async {
     aktifKonuModel = konuList[index];
     _konuStateService.saveKonuId(index);
+
+    // Seçilen konunun derslerini çek ve güncelle
+    final dersler = await fetchDerslerForKonu(aktifKonuModel!);
+    aktifDersList = ObservableList.of(dersler); // Bu listeyi UI'da kullanacaksın
   }
 
   @action
   void aktifDersAta(int index) {
-    aktifDersId = aktifKonuModel!.dersler[index].id;
-    aktifDers = aktifKonuModel!.dersler[index];
+    aktifDersId = aktifKonuModel!.dersIdleri[index];
     _dersStateService.saveDersId(aktifDersId ?? 0);
   }
 
@@ -66,5 +75,18 @@ abstract class _HomeViewModel with Store {
   Future<void> setRika() async {
     isRika = !isRika;
     await _hatStateService.saveIsRika(isRika);
+  }
+
+  @action
+  Future<List<DersModel>> fetchDerslerForKonu(KonuModel konu) async {
+    List<DersModel> dersModels = [];
+    for (int dersId in konu.dersIdleri) {
+      final dersJson = await _dersListService.fetchDersById(dersId);
+      log('Ders JSON: $dersJson'); // Burada veriyi logluyoruz
+      DersModel dersModel = DersModel.fromJson(dersJson);
+      dersModels.add(dersModel);
+    }
+    log('Toplam ders sayısı: ${dersModels.length}');
+    return dersModels;
   }
 }

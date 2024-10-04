@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "konuTitle": "Harfler",
+    "rika": "harfler_rika",
+    "matbu": "harfler_matbu",
+    "color": "primary",
+    "dersler": [
+      {
+        "id": 1
+      },
+      {
+        "id": 2
+      },
+      {
+        "id": 3
+      },
+      {
+        "id": 4
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "konuTitle": "Okutucu Harfler",
+    "rika": "okutucu_harfler_rika",
+    "matbu": "okutucu_harfler_matbu",
+    "color": "secondary",
+    "dersler": [
+      {
+        "id": 5
+      },
+      {
+        "id": 6
+      },
+      {
+        "id": 7
+      },
+      {
+        "id": 8
+      },
+      {
+        "id": 9
+      },
+      {
+        "id": 10
+      },
+      {
+        "id": 11
+      },
+      {
+        "id": 12
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "konuTitle": "Kef Harfi",
+    "rika": "kef_harfi_rika",
+    "matbu": "kef_harfi_matbu",
+    "color": "tertiary",
+    "dersler": [
+      {
+        "id": 13
+      },
+      {
+        "id": 14
+      },
+      {
+        "id": 15
+      },
+      {
+        "id": 16
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "konuTitle": "Kolay Okuma Kuralları",
+    "rika": "kolay_okuma_kurallari_rika",
+    "matbu": "kolay_okuma_kurallari_matbu",
+    "color": "fourth",
+    "dersler": [
+      {
+        "id": 17
+      },
+      {
+        "id": 18
+      },
+      {
+        "id": 19
+      },
+      {
+        "id": 20
+      },
+      {
+        "id": 21
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "konuTitle": "Ekler",
+    "rika": "ekler_rika",
+    "matbu": "ekler_matbu",
+    "color": "fifth",
+    "dersler": [
+      {
+        "id": 22
+      },
+      {
+        "id": 23
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "konuTitle": "Atasözleri",
+    "rika": "atasozleri_rika",
+    "matbu": "atasozleri_matbu",
+    "color": "sixth",
+    "dersler": [
+      {
+        "id": 24
+      },
+      {
+        "id": 25
+      },
+      {
+        "id": 26
+      },
+      {
+        "id": 27
+      }
+    ]
+  }
+]

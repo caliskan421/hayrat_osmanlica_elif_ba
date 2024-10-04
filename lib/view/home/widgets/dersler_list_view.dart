@@ -15,13 +15,18 @@ class DerslerListView extends StatelessWidget {
       child: Observer(
         builder: (_) {
           final konuModel = homeViewModel.aktifKonuModel;
+          final dersList = homeViewModel.aktifDersList; // Dersleri buradan çekiyoruz
+
+          if (konuModel == null || dersList.isEmpty) {
+            return const Center(child: Text("Ders bulunamadı")); // Boş liste kontrolü
+          }
+
           return ListView.builder(
-            itemCount: konuModel?.dersler.length ?? 0,
+            itemCount: dersList.length,
             itemBuilder: (context, index) {
-              final aktifModel = homeViewModel.aktifKonuModel;
-              final dersModel = konuModel!.dersler[index];
-              bool isActiveDers =
-                  aktifModel!.dersler[index].id == homeViewModel.aktifDersId;
+              final dersModel = dersList[index]; // aktifDersList'ten dersModel alıyoruz
+              final bool isActiveDers = dersModel.id == homeViewModel.aktifDersId;
+
               return Column(
                 children: [
                   Row(
@@ -31,9 +36,7 @@ class DerslerListView extends StatelessWidget {
                         child: GestureDetector(
                           onTap: () {
                             homeViewModel.aktifDersAta(index);
-                            context.pushNamed(
-                              'detail',
-                            );
+                            context.pushNamed('detail'); // Detay sayfasına geçiş
                           },
                           child: Row(
                             children: [
@@ -42,10 +45,11 @@ class DerslerListView extends StatelessWidget {
                                 height: 24,
                                 decoration: BoxDecoration(
                                   color: isActiveDers
-                                      ? konuModel.renkler.primaryColor
+                                      ? konuModel.color.color
                                       : AppColors.background,
-                                  borderRadius:
-                                      const BorderRadius.all(Radius.circular(30)),
+                                  borderRadius: const BorderRadius.all(
+                                    Radius.circular(30),
+                                  ),
                                 ),
                                 child: Center(
                                   child: Text(
@@ -64,13 +68,13 @@ class DerslerListView extends StatelessWidget {
                               const Gap(15),
                               Expanded(
                                 child: Text(
-                                  dersModel.dersAdi,
+                                  dersModel.title,
                                   style: Theme.of(context)
                                       .textTheme
                                       .headlineMedium!
                                       .copyWith(
                                         color: isActiveDers
-                                            ? konuModel.renkler.primaryColor
+                                            ? konuModel.color.color
                                             : AppColors.onSurface,
                                       ),
                                 ),

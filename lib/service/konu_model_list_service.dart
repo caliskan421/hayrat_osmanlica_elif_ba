@@ -4,7 +4,7 @@ import 'package:flutter/services.dart' show rootBundle;
 
 class KonuModelListService {
   Future<List<KonuModel>> fetchKonularFromJson() async {
-    String value = await rootBundle.loadString('assets/json_model/json_model.json');
+    String value = await rootBundle.loadString('assets/json_model/konu_list_model.json');
 
     var jsonObject = jsonDecode(value);
     List<KonuModel> konularList =

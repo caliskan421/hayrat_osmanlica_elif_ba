@@ -1,22 +1,17 @@
-import 'dart:ui';
-import 'package:hayrat_osmanlica_elif_ba/theme/light_theme.dart';
+import 'package:flutter/material.dart';
 
-class ColorModel {
-  final Color primaryColor;
-  final Color secondaryColor;
+import '../theme/light_theme.dart';
 
-  ColorModel({required this.primaryColor, required this.secondaryColor});
+class KonuColorModel {
+  final Color color;
 
-  factory ColorModel.fromJson(Map<String, dynamic> json) {
-    final primaryColorName = json['primary_color'] as String;
-    final secondaryColorName = json['secondary_color'] as String;
+  KonuColorModel({required this.color});
 
-    final primaryColor = AppColors.colorMap[primaryColorName] ?? AppColors.primary;
-    final secondaryColor = AppColors.colorMap[secondaryColorName] ?? AppColors.primary;
-
-    return ColorModel(
-      primaryColor: primaryColor,
-      secondaryColor: secondaryColor,
+  factory KonuColorModel.fromKonuModelJson(String colorName) {
+    // String gelen colorName'i Color'a çevir
+    final color = AppColors.colorMap[colorName] ?? AppColors.primary;
+    return KonuColorModel(
+      color: color,
     );
   }
 }

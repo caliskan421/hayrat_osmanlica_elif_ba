@@ -1,20 +1,31 @@
+import 'ders_color_model.dart';
+import 'icerik_model.dart';
+
 class DersModel {
   final int id;
-  final String dersAdi;
+  final String title;
   final String link;
-  bool dersTiklanildiMi = false;
+  final List<IcerikModel> icerikler;
+  final DersColorModel colors;
 
   DersModel({
     required this.id,
-    required this.dersAdi,
+    required this.title,
     required this.link,
+    required this.icerikler,
+    required this.colors,
   });
 
   factory DersModel.fromJson(Map<String, dynamic> json) {
     return DersModel(
       id: json['id'],
-      dersAdi: json['dersAdi'],
-      link: json['link'] ?? '',
+      title: json['title'],
+      link: json['link'],
+      icerikler: (json['icerik'] as List)
+          .map((icerikJson) => IcerikModel.fromJson(icerikJson))
+          .toList(),
+      colors:
+          DersColorModel.fromDersModelJson(json['colors']), // DersColorModel kullanılıyor
     );
   }
 }

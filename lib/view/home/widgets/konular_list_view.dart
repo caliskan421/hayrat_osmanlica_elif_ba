@@ -39,9 +39,7 @@ class KonularListView extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       decoration: BoxDecoration(
                         borderRadius: const BorderRadius.all(Radius.circular(10)),
-                        color: aktifmi
-                            ? konuModel.renkler.primaryColor
-                            : AppColors.surfaceBright,
+                        color: aktifmi ? konuModel.color.color : AppColors.surfaceBright,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,

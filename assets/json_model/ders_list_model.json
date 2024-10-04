@@ -1,0 +1,643 @@
+[
+  {
+    "id": 1,
+    "title": "Osmanlı Türkçesinde Bulunan Harfler",
+    "link": "",
+    "icerik": [
+      {
+        "konu": "Osmanlıcadaki harfler ekseriya Kur’an’dan alınmıştır. Kırmızı renkli harfler Türkçe asıllı kelimelerde kullanılmaz. Mor renkli harfler, Farsçadan, yeşil renkli “Nef” harfi Türkçeden gelmiştir.",
+        "icerik_type": "harf",
+        "hatGecisAcikMi": false,
+        "ornek": [
+          {
+            "osm": "ا",
+            "lat": "Elif",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ب",
+            "lat": "Be",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "پ",
+            "lat": "Pe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ت",
+            "lat": "Te",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ث",
+            "lat": "Se",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "ج",
+            "lat": "Cim",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "چ",
+            "lat": "Çe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ح",
+            "lat": "Ha",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "خ",
+            "lat": "Hı",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "د",
+            "lat": "Dal",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ذ",
+            "lat": "Zel",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "ر",
+            "lat": "Ra",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ز",
+            "lat": "Ze",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ژ",
+            "lat": "Je",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "س",
+            "lat": "Sin",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ش",
+            "lat": "Şın",
+            "hasDottedBorder": true,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ص",
+            "lat": "Sad",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ض",
+            "lat": "Dat",
+            "hasDottedBorder": true,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "ط",
+            "lat": "Tı",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ظ",
+            "lat": "Zı",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "ع",
+            "lat": "Ayın",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "غ",
+            "lat": "Gayın",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ف",
+            "lat": "Fe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ق",
+            "lat": "Kaf",
+            "hasDottedBorder": true,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ك",
+            "lat": "Kef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ك",
+            "lat": "Gef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ڭ",
+            "lat": "Nef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "fourth",
+              "osm": "fourth",
+              "cont": "fourthContainer"
+            }
+          },
+          {
+            "osm": "ل",
+            "lat": "Lam",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "م",
+            "lat": "Mim",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ن",
+            "lat": "Nun",
+            "hasDottedBorder": true,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "و",
+            "lat": "Vav",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ە",
+            "lat": "He",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ی",
+            "lat": "Ye",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          }
+        ]
+      },
+      {
+        "konu": "Osmanlıcada bulunup da Kur’ân harflerinde olmayan harfler",
+        "ornek_type": "harf",
+        "ornek": [
+          {
+            "osm": "پ",
+            "lat": "Pe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "چ",
+            "lat": "Çe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ژ",
+            "lat": "Je",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ك",
+            "lat": "Gef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ڭ",
+            "lat": "Nef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "fourth",
+              "osm": "fourth",
+              "cont": "fourthContainer"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Harflerin Rik’a Hattı Yazılışları",
+    "icerik": [
+      {
+        "konu": "Elif, Dal, Zel, Ra, Ze, Je ve Vav harfleri kendisinden önceki harfle bitişir. Fakat kendisinden sonraki harflere bitişmez.",
+        "ornek_type": "harf_birlesim",
+        "ornek": [
+          {
+            "harf": "HA",
+            "basit_ornek": null,
+            "detaylı_ornek": [
+              {
+                "harf": "س",
+                "renk": "red"
+              },
+              {
+                "harf": "ف",
+                "renk": null
+              },
+              {
+                "harf": "ر",
+                "renk": "red"
+              }
+            ]
+          },
+          {
+            "harf": "HA",
+            "basit_ornek": null,
+            "detaylı_ornek": [
+              {
+                "harf": "س",
+                "renk": "red"
+              },
+              {
+                "harf": "ف",
+                "renk": null
+              },
+              {
+                "harf": "ر",
+                "renk": "red"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "konu": "Kesikli çizgi içine alınan 'Şın', 'Dat', 'Kaf' ve 'Nun' harflerinin noktaları, el yazısında harfin sonuna kuyruk olarak eklenir.",
+        "ornek_type": "harf_birlesim",
+        "ornek": [
+          {
+            "harf": "HA",
+            "basit_ornek": "قفق",
+            "detaylı_ornek": [
+              {
+                "harf": "س",
+                "renk": "red"
+              },
+              {
+                "harf": "ف",
+                "renk": null
+              },
+              {
+                "harf": "ر",
+                "renk": "red"
+              }
+            ]
+          },
+          {
+            "harf": "HA",
+            "basit_ornek": "قفق",
+            "detaylı_ornek": [
+              {
+                "harf": "س",
+                "renk": "red"
+              },
+              {
+                "harf": "ف",
+                "renk": null
+              },
+              {
+                "harf": "ر",
+                "renk": "red"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "link": ""
+  },
+  {
+    "id": 3,
+    "title": "Harflerin Birleşim Halleri",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 4,
+    "title": "Rakamlar ve Sayılar",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 5,
+    "title": "Osmanlıca Okutucu Harfler",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 6,
+    "title": "\"Elif\" Okutucusu Örnekleri",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 7,
+    "title": "\"He\" Okutucusunun A Sesiyle Okuttuğu Yerler",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 8,
+    "title": "\"He\" Okutucusu Örnekleri",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 9,
+    "title": "Kalın ve İnce Karşılığı Olan Harfler",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 10,
+    "title": "Siyak-Sibak Meselesi",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 11,
+    "title": "\"Vav\" Okutucusu Örnekleri",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 12,
+    "title": "\"Ye\" Okutucusu Örnekleri",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 13,
+    "title": "Kâf-ı Arabî",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 14,
+    "title": "Kâf-ı Farisî",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 15,
+    "title": "Kâf-ı Nunî (Hazal Ne, Nef)",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 16,
+    "title": "Kâf-ı Yayî (Vavî)",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 17,
+    "title": "Okuma Kolaylığı Sağlayacak Bazı Kurallar",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 18,
+    "title": "Kelime İçinde Kalın Sesler",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 19,
+    "title": "Klişeleşmiş Bazı Kelimeler",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 20,
+    "title": "Türkçeye Yerleşmiş Bazı Arapça Kelimeler",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 21,
+    "title": "Türkçeye Yerleşmiş Bazı Farsça Kelimeler",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 22,
+    "title": "Kalın İnce Okunuşa Göre Yazılımı",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 23,
+    "title": "Kendisinden Sonraki Hafle Birleşmeyen Harfler",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 24,
+    "title": "Atasözleri 1",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 25,
+    "title": "Atasözleri 2",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 26,
+    "title": "Atasözleri 3",
+    "icerik": "TIP1",
+    "link": ""
+  },
+  {
+    "id": 27,
+    "title": "Atasözleri 4",
+    "icerik": "TIP1",
+    "link": ""
+  }
+]

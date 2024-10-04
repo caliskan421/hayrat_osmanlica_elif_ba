@@ -36,8 +36,7 @@ class _HomeViewState extends State<HomeView> {
             onTap: homeViewModel.setRika,
             child: SvgPicture.asset(
               'assets/icons/marka.svg',
-
-              /// Todo --> Svg boyutunu ayarla
+              // Todo --> Svg boyutunu ayarla
               width: 50,
             ),
           ),
