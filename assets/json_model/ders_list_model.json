@@ -343,7 +343,8 @@
       },
       {
         "konu": "Osmanlıcada bulunup da Kur’ân harflerinde olmayan harfler",
-        "ornek_type": "harf",
+        "icerik_type": "harf",
+        "hatGecisAcikMi": false,
         "ornek": [
           {
             "osm": "پ",
@@ -402,242 +403,157 @@
   {
     "id": 2,
     "title": "Harflerin Rik’a Hattı Yazılışları",
-    "icerik": [
-      {
-        "konu": "Elif, Dal, Zel, Ra, Ze, Je ve Vav harfleri kendisinden önceki harfle bitişir. Fakat kendisinden sonraki harflere bitişmez.",
-        "ornek_type": "harf_birlesim",
-        "ornek": [
-          {
-            "harf": "HA",
-            "basit_ornek": null,
-            "detaylı_ornek": [
-              {
-                "harf": "س",
-                "renk": "red"
-              },
-              {
-                "harf": "ف",
-                "renk": null
-              },
-              {
-                "harf": "ر",
-                "renk": "red"
-              }
-            ]
-          },
-          {
-            "harf": "HA",
-            "basit_ornek": null,
-            "detaylı_ornek": [
-              {
-                "harf": "س",
-                "renk": "red"
-              },
-              {
-                "harf": "ف",
-                "renk": null
-              },
-              {
-                "harf": "ر",
-                "renk": "red"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "konu": "Kesikli çizgi içine alınan 'Şın', 'Dat', 'Kaf' ve 'Nun' harflerinin noktaları, el yazısında harfin sonuna kuyruk olarak eklenir.",
-        "ornek_type": "harf_birlesim",
-        "ornek": [
-          {
-            "harf": "HA",
-            "basit_ornek": "قفق",
-            "detaylı_ornek": [
-              {
-                "harf": "س",
-                "renk": "red"
-              },
-              {
-                "harf": "ف",
-                "renk": null
-              },
-              {
-                "harf": "ر",
-                "renk": "red"
-              }
-            ]
-          },
-          {
-            "harf": "HA",
-            "basit_ornek": "قفق",
-            "detaylı_ornek": [
-              {
-                "harf": "س",
-                "renk": "red"
-              },
-              {
-                "harf": "ف",
-                "renk": null
-              },
-              {
-                "harf": "ر",
-                "renk": "red"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "link": ""
+    "link": "",
+    "icerik": null
   },
   {
     "id": 3,
     "title": "Harflerin Birleşim Halleri",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 4,
     "title": "Rakamlar ve Sayılar",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 5,
     "title": "Osmanlıca Okutucu Harfler",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 6,
     "title": "\"Elif\" Okutucusu Örnekleri",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 7,
     "title": "\"He\" Okutucusunun A Sesiyle Okuttuğu Yerler",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 8,
     "title": "\"He\" Okutucusu Örnekleri",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 9,
     "title": "Kalın ve İnce Karşılığı Olan Harfler",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 10,
     "title": "Siyak-Sibak Meselesi",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 11,
     "title": "\"Vav\" Okutucusu Örnekleri",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 12,
     "title": "\"Ye\" Okutucusu Örnekleri",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 13,
     "title": "Kâf-ı Arabî",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 14,
     "title": "Kâf-ı Farisî",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 15,
     "title": "Kâf-ı Nunî (Hazal Ne, Nef)",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 16,
     "title": "Kâf-ı Yayî (Vavî)",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 17,
     "title": "Okuma Kolaylığı Sağlayacak Bazı Kurallar",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 18,
     "title": "Kelime İçinde Kalın Sesler",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 19,
     "title": "Klişeleşmiş Bazı Kelimeler",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 20,
     "title": "Türkçeye Yerleşmiş Bazı Arapça Kelimeler",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 21,
     "title": "Türkçeye Yerleşmiş Bazı Farsça Kelimeler",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 22,
     "title": "Kalın İnce Okunuşa Göre Yazılımı",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 23,
     "title": "Kendisinden Sonraki Hafle Birleşmeyen Harfler",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 24,
     "title": "Atasözleri 1",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 25,
     "title": "Atasözleri 2",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 26,
     "title": "Atasözleri 3",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   },
   {
     "id": 27,
     "title": "Atasözleri 4",
-    "icerik": "TIP1",
+    "icerik": null,
     "link": ""
   }
 ]

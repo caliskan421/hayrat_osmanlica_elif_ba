@@ -53,22 +53,33 @@ abstract class _HomeViewModel with Store {
     final res = await _konuListService.fetchKonularFromJson();
     konuList.addAll(ObservableList.of(res));
     aktifKonuModel = konuList[await _konuStateService.getKonuId()];
-  }
-
-  @action
-  void akitfKonuAta(int index) async {
-    aktifKonuModel = konuList[index];
-    _konuStateService.saveKonuId(index);
-
-    // Seçilen konunun derslerini çek ve güncelle
     final dersler = await fetchDerslerForKonu(aktifKonuModel!);
     aktifDersList = ObservableList.of(dersler); // Bu listeyi UI'da kullanacaksın
   }
 
   @action
-  void aktifDersAta(int index) {
+  Future akitfKonuAta(int index) async {
+    aktifKonuModel = konuList[index];
+    _konuStateService.saveKonuId(index);
+
+    // Seçilen konunun derslerini çek ve güncelle
+    final dersler = await fetchDerslerForKonu(aktifKonuModel!);
+    aktifDersList = ObservableList.of(dersler);
+  }
+
+  @action
+  Future<void> aktifDersAta(int index) async {
     aktifDersId = aktifKonuModel!.dersIdleri[index];
-    _dersStateService.saveDersId(aktifDersId ?? 0);
+    log("Aktif ders ID: $aktifDersId");
+
+    // DersModel'i async olarak fetchDersById ile çekiyoruz
+    final dersJson = await _dersListService.fetchDersById(aktifDersId!);
+
+    // Çekilen JSON'u DersModel'e dönüştürüyoruz
+    aktifDers = DersModel.fromJson(dersJson);
+    log("Aktif ders title: ${aktifDers?.title}");
+
+    _dersStateService.saveDersId(aktifDersId!);
   }
 
   @action
@@ -82,11 +93,9 @@ abstract class _HomeViewModel with Store {
     List<DersModel> dersModels = [];
     for (int dersId in konu.dersIdleri) {
       final dersJson = await _dersListService.fetchDersById(dersId);
-      log('Ders JSON: $dersJson'); // Burada veriyi logluyoruz
       DersModel dersModel = DersModel.fromJson(dersJson);
       dersModels.add(dersModel);
     }
-    log('Toplam ders sayısı: ${dersModels.length}');
     return dersModels;
   }
 }

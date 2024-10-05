@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:hayrat_osmanlica_elif_ba/view/detail/widgets/link_container.dart';
 
 import '../../model/ders_model.dart';
 import '../../widget/harf_grid_view.dart';
@@ -17,19 +18,21 @@ class DetailView extends StatefulWidget {
 }
 
 class _DetailViewState extends State<DetailView> {
-  String dersTitle = '';
-  late int dersId;
+  late DersModel dersModel;
+  late String dersTitle;
+  Color color = homeViewModel.konuList[homeViewModel.aktifKonuId! - 1].color.color;
+
   @override
   void initState() {
     super.initState();
-    DersModel? dersModel = homeViewModel.aktifDers;
-    dersTitle = dersModel!.title;
-    dersId = dersModel.id;
+
+    dersModel = homeViewModel.aktifDers!;
+    dersTitle = dersModel.title;
   }
 
   @override
   Widget build(BuildContext context) {
-    log("DersID --> $dersId");
+    log("Ders Title -> $dersTitle");
     return Scaffold(
       appBar: AppBar(
         leading: Padding(
@@ -46,7 +49,7 @@ class _DetailViewState extends State<DetailView> {
           ),
         ),
         actions: [
-          const HatContainer(),
+          HatContainer(color: color),
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 16),
             child: SvgPicture.asset(
@@ -55,7 +58,29 @@ class _DetailViewState extends State<DetailView> {
           )
         ],
       ),
-      body: const HarfGridView(),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            Text(dersTitle, style: Theme.of(context).textTheme.titleLarge),
+            LinkContainer(color: color),
+            const Expanded(child: HarfGridView()),
+          ],
+        ),
+      ),
     );
   }
 }
+
+/*
+Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            Text(dersTitle, style: Theme.of(context).textTheme.titleLarge),
+            const LinkContainer(),
+            const Expanded(child: HarfGridView()),
+          ],
+        ),
+      ),
+*/

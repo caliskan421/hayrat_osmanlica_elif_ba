@@ -3,6 +3,8 @@ import 'color_model.dart';
 class KonuModel {
   final int id;
   final String title;
+
+  /// Todo -> Svg almak mantıklı mı?
   final String rikaIcon;
   final String matbuIcon;
   final List<int> dersIdleri;
@@ -24,7 +26,7 @@ class KonuModel {
       rikaIcon: json['rika'] ?? '',
       matbuIcon: json['matbu'] ?? '',
       dersIdleri: (json['dersler'] as List).map((ders) => ders['id'] as int).toList(),
-      color: KonuColorModel.fromKonuModelJson(json['color']), // ColorModel kullanılıyor
+      color: KonuColorModel.fromKonuModelJson(json['color']),
     );
   }
 }

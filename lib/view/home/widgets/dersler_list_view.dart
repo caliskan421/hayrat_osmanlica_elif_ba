@@ -15,7 +15,7 @@ class DerslerListView extends StatelessWidget {
       child: Observer(
         builder: (_) {
           final konuModel = homeViewModel.aktifKonuModel;
-          final dersList = homeViewModel.aktifDersList; // Dersleri buradan çekiyoruz
+          final dersList = homeViewModel.aktifDersList;
 
           if (konuModel == null || dersList.isEmpty) {
             return const Center(child: Text("Ders bulunamadı")); // Boş liste kontrolü
@@ -25,72 +25,75 @@ class DerslerListView extends StatelessWidget {
             itemCount: dersList.length,
             itemBuilder: (context, index) {
               final dersModel = dersList[index]; // aktifDersList'ten dersModel alıyoruz
-              final bool isActiveDers = dersModel.id == homeViewModel.aktifDersId;
 
-              return Column(
-                children: [
-                  Row(
-                    children: [
-                      const Gap(10),
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () {
-                            homeViewModel.aktifDersAta(index);
-                            context.pushNamed('detail'); // Detay sayfasına geçiş
-                          },
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 32,
-                                height: 24,
-                                decoration: BoxDecoration(
-                                  color: isActiveDers
-                                      ? konuModel.color.color
-                                      : AppColors.background,
-                                  borderRadius: const BorderRadius.all(
-                                    Radius.circular(30),
+              return Observer(builder: (context) {
+                final bool isActiveDers = dersModel.id == homeViewModel.aktifDersId;
+
+                return Column(
+                  children: [
+                    Row(
+                      children: [
+                        const Gap(10),
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {
+                              homeViewModel.aktifDersAta(index);
+                              context.pushNamed('detail');
+                            },
+                            child: Row(
+                              children: [
+                                Container(
+                                  width: 32,
+                                  height: 24,
+                                  decoration: BoxDecoration(
+                                    color: isActiveDers
+                                        ? konuModel.color.color
+                                        : AppColors.background,
+                                    borderRadius: const BorderRadius.all(
+                                      Radius.circular(30),
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: Text(
+                                      "${index + 1}",
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .headlineMedium!
+                                          .copyWith(
+                                            color: isActiveDers
+                                                ? AppColors.background
+                                                : AppColors.onSurface,
+                                          ),
+                                    ),
                                   ),
                                 ),
-                                child: Center(
+                                const Gap(15),
+                                Expanded(
                                   child: Text(
-                                    "${index + 1}",
+                                    dersModel.title,
                                     style: Theme.of(context)
                                         .textTheme
                                         .headlineMedium!
                                         .copyWith(
                                           color: isActiveDers
-                                              ? AppColors.background
+                                              ? konuModel.color.color
                                               : AppColors.onSurface,
                                         ),
                                   ),
                                 ),
-                              ),
-                              const Gap(15),
-                              Expanded(
-                                child: Text(
-                                  dersModel.title,
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineMedium!
-                                      .copyWith(
-                                        color: isActiveDers
-                                            ? konuModel.color.color
-                                            : AppColors.onSurface,
-                                      ),
-                                ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 10),
-                    child: Divider(color: AppColors.outlineVariant),
-                  ),
-                ],
-              );
+                      ],
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 10),
+                      child: Divider(color: AppColors.outlineVariant),
+                    ),
+                  ],
+                );
+              });
             },
           );
         },

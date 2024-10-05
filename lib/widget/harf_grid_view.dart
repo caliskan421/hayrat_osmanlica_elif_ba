@@ -7,7 +7,7 @@ class HarfGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 80),
+      padding: const EdgeInsets.symmetric(vertical: 30),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3, // her satırdaki öğe sayısı
         mainAxisSpacing: 12, // satırlar arasındaki boşluk

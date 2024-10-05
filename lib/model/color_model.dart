@@ -8,7 +8,6 @@ class KonuColorModel {
   KonuColorModel({required this.color});
 
   factory KonuColorModel.fromKonuModelJson(String colorName) {
-    // String gelen colorName'i Color'a çevir
     final color = AppColors.colorMap[colorName] ?? AppColors.primary;
     return KonuColorModel(
       color: color,
