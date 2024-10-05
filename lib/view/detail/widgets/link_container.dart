@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hayrat_osmanlica_elif_ba/core/extensions/theme_extension.dart';
 
 import '../../../theme/light_theme.dart';
 
@@ -39,14 +40,11 @@ class LinkContainer extends StatelessWidget {
             children: [
               Text(
                 'osmanlica.online',
-                style: Theme.of(context).textTheme.labelMedium!.copyWith(color: color),
+                style: context.textTheme().labelMedium!.copyWith(color: color),
               ),
               Text(
                 'Dersin videosunu izlemek için tıklayın',
-                style: Theme.of(context)
-                    .textTheme
-                    .labelSmall!
-                    .copyWith(color: AppColors.outline),
+                style: context.textTheme().labelSmall!.copyWith(color: AppColors.outline),
               ),
             ],
           ),

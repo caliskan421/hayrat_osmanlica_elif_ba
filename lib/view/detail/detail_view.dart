@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
+import 'package:hayrat_osmanlica_elif_ba/core/extensions/theme_extension.dart';
 import 'package:hayrat_osmanlica_elif_ba/view/detail/widgets/link_container.dart';
 
 import '../../model/ders_model.dart';
@@ -20,7 +21,8 @@ class DetailView extends StatefulWidget {
 class _DetailViewState extends State<DetailView> {
   late DersModel dersModel;
   late String dersTitle;
-  Color color = homeViewModel.konuList[homeViewModel.aktifKonuId! - 1].color.color;
+  Color primaryColor = homeViewModel.aktifKonuModel!.colors.primaryColor!;
+  Color secondaryColor = homeViewModel.aktifKonuModel!.colors.secondaryColor!;
 
   @override
   void initState() {
@@ -49,7 +51,10 @@ class _DetailViewState extends State<DetailView> {
           ),
         ),
         actions: [
-          HatContainer(color: color),
+          HatContainer(
+            primaryColor: primaryColor,
+            secondaryColor: secondaryColor,
+          ),
           Padding(
             padding: const EdgeInsets.only(right: 20, left: 16),
             child: SvgPicture.asset(
@@ -62,8 +67,8 @@ class _DetailViewState extends State<DetailView> {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            Text(dersTitle, style: Theme.of(context).textTheme.titleLarge),
-            LinkContainer(color: color),
+            Text(dersTitle, style: context.textTheme().titleLarge),
+            LinkContainer(color: primaryColor),
             const Expanded(child: HarfGridView()),
           ],
         ),
@@ -71,16 +76,3 @@ class _DetailViewState extends State<DetailView> {
     );
   }
 }
-
-/*
-Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-            Text(dersTitle, style: Theme.of(context).textTheme.titleLarge),
-            const LinkContainer(),
-            const Expanded(child: HarfGridView()),
-          ],
-        ),
-      ),
-*/

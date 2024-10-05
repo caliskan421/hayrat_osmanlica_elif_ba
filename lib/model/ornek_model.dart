@@ -1,4 +1,3 @@
-import 'color_model.dart';
 import 'ders_color_model.dart';
 
 class Ornek {
@@ -19,7 +18,6 @@ class Ornek {
       osm: json['osm'],
       lat: json['lat'],
       hasDottedBorder: json['hasDottedBorder'],
-      // colors artık bir Map olarak bekleniyor, DersColorModel kullanılıyor
       colors: DersColorModel.fromDersModelJson(json['colors']),
     );
   }

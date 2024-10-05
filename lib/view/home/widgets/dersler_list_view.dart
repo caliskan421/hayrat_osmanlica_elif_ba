@@ -47,7 +47,7 @@ class DerslerListView extends StatelessWidget {
                                   height: 24,
                                   decoration: BoxDecoration(
                                     color: isActiveDers
-                                        ? konuModel.color.color
+                                        ? konuModel.colors.primaryColor
                                         : AppColors.background,
                                     borderRadius: const BorderRadius.all(
                                       Radius.circular(30),
@@ -76,7 +76,7 @@ class DerslerListView extends StatelessWidget {
                                         .headlineMedium!
                                         .copyWith(
                                           color: isActiveDers
-                                              ? konuModel.color.color
+                                              ? konuModel.colors.primaryColor
                                               : AppColors.onSurface,
                                         ),
                                   ),

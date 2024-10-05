@@ -1,4 +1,4 @@
-import 'color_model.dart';
+import 'konu_color_model.dart';
 
 class KonuModel {
   final int id;
@@ -8,7 +8,7 @@ class KonuModel {
   final String rikaIcon;
   final String matbuIcon;
   final List<int> dersIdleri;
-  final KonuColorModel color;
+  final KonuColorModel colors;
 
   KonuModel({
     required this.id,
@@ -16,7 +16,7 @@ class KonuModel {
     required this.rikaIcon,
     required this.matbuIcon,
     required this.dersIdleri,
-    required this.color,
+    required this.colors,
   });
 
   factory KonuModel.fromJson(Map<String, dynamic> json) {
@@ -26,7 +26,7 @@ class KonuModel {
       rikaIcon: json['rika'] ?? '',
       matbuIcon: json['matbu'] ?? '',
       dersIdleri: (json['dersler'] as List).map((ders) => ders['id'] as int).toList(),
-      color: KonuColorModel.fromKonuModelJson(json['color']),
+      colors: KonuColorModel.fromKonuModelJson(json['colors']),
     );
   }
 }

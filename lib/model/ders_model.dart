@@ -1,4 +1,3 @@
-import 'ders_color_model.dart';
 import 'icerik_model.dart';
 
 class DersModel {

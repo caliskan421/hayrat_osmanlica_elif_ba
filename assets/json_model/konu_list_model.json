@@ -4,7 +4,10 @@
     "konuTitle": "Harfler",
     "rika": "harfler_rika",
     "matbu": "harfler_matbu",
-    "color": "primary",
+    "colors": {
+      "primary": "primary",
+      "secondary": "primaryContainer"
+    },
     "dersler": [
       {
         "id": 1
@@ -25,7 +28,10 @@
     "konuTitle": "Okutucu Harfler",
     "rika": "okutucu_harfler_rika",
     "matbu": "okutucu_harfler_matbu",
-    "color": "secondary",
+    "colors": {
+      "primary": "secondary",
+      "secondary": "secondaryContainer"
+    },
     "dersler": [
       {
         "id": 5
@@ -58,7 +64,10 @@
     "konuTitle": "Kef Harfi",
     "rika": "kef_harfi_rika",
     "matbu": "kef_harfi_matbu",
-    "color": "tertiary",
+    "colors": {
+      "primary": "tertiary",
+      "secondary": "tertiaryContainer"
+    },
     "dersler": [
       {
         "id": 13
@@ -79,7 +88,10 @@
     "konuTitle": "Kolay Okuma Kuralları",
     "rika": "kolay_okuma_kurallari_rika",
     "matbu": "kolay_okuma_kurallari_matbu",
-    "color": "fourth",
+    "colors": {
+      "primary": "fourth",
+      "secondary": "fourthContainer"
+    },
     "dersler": [
       {
         "id": 17
@@ -103,7 +115,10 @@
     "konuTitle": "Ekler",
     "rika": "ekler_rika",
     "matbu": "ekler_matbu",
-    "color": "fifth",
+    "colors": {
+      "primary": "fifth",
+      "secondary": "fifthContainer"
+    },
     "dersler": [
       {
         "id": 22
@@ -118,7 +133,10 @@
     "konuTitle": "Atasözleri",
     "rika": "atasozleri_rika",
     "matbu": "atasozleri_matbu",
-    "color": "sixth",
+    "colors": {
+      "primary": "sixth",
+      "secondary": "sixthContainer"
+    },
     "dersler": [
       {
         "id": 24

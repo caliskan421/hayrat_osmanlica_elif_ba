@@ -59,6 +59,7 @@ abstract class _HomeViewModel with Store {
 
   @action
   Future akitfKonuAta(int index) async {
+    log('Seçilen Konu ID: ${konuList[index].id}');
     aktifKonuModel = konuList[index];
     _konuStateService.saveKonuId(index);
 
