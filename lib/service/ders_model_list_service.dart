@@ -1,8 +1,9 @@
 import 'dart:convert';
-import 'dart:developer';
+import 'package:flutter/services.dart' show rootBundle;
 
-import 'package:flutter/services.dart';
-
+/// ders_list_model.json daki her bir liste elemanini [Map] olarak donduren Service
+/// [Map] dondurme nedenimiz:
+///   Ders bilgilerini [ID] bazlı bir sorguyla çekiyorsun (örneğin [fetchDersById] metodu ile {belirli bir dersId}’ye sahip dersi çekiyorsun).
 class DersModelListService {
   Future<Map<String, dynamic>> fetchDersById(int dersId) async {
     String value = await rootBundle.loadString('assets/json_model/ders_list_model.json');
@@ -12,7 +13,6 @@ class DersModelListService {
     final ders = dersList.firstWhere((ders) => ders['id'] == dersId, orElse: () => null);
 
     if (ders == null) {
-      log('Ders ID $dersId bulunamadı');
       return {};
     }
 

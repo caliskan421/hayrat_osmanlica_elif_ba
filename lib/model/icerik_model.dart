@@ -4,7 +4,7 @@ class IcerikModel {
   final String? konu;
   final String? icerikType;
   final bool? hatGecisAcikMi;
-  final List<Ornek>? ornek;
+  final List<OrnekModel>? ornek;
 
   IcerikModel({
     this.konu,
@@ -20,7 +20,9 @@ class IcerikModel {
       icerikType: json['icerik_type'] ?? '',
       hatGecisAcikMi: json['hatGecisAcikMi'] ?? false,
       ornek: json['ornek'] != null
-          ? (json['ornek'] as List).map((ornekJson) => Ornek.fromJson(ornekJson)).toList()
+          ? (json['ornek'] as List)
+              .map((ornekJson) => OrnekModel.fromJson(ornekJson))
+              .toList()
           : [],
     );
   }

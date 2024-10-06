@@ -1,5 +1,6 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
+/// Konu ikonlarini secilen Hat'ta gore local'e kaydeden Service
 class HatStateService {
   Future<void> saveIsRika(bool isRika) async {
     final SharedPreferences preferences = await SharedPreferences.getInstance();

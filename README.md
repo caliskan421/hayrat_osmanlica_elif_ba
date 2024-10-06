@@ -6,7 +6,7 @@ Build_runner:
 
 //////////
 
-[KonuColorModel] {String} değer alırken [DersColorModel] {Map} alıyor
+
 
 //////////
 

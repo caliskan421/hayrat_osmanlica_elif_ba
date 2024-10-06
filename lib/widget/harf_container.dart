@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/text_styles.dart';
+
 class HarfContainer extends StatelessWidget {
   const HarfContainer({
     super.key,
@@ -23,6 +25,7 @@ class HarfContainer extends StatelessWidget {
     return Container(
       width: 106,
       height: 101,
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
           color: color, borderRadius: const BorderRadius.all(Radius.circular(8))),
       child: Column(
@@ -33,8 +36,7 @@ class HarfContainer extends StatelessWidget {
           ),
           Text(
             icon,
-            // TODO --> font degistir... parametre ekle...
-            style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: iconColor),
+            style: TextStyles.matbu.copyWith(color: iconColor),
           ),
         ],
       ),

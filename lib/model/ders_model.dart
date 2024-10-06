@@ -25,4 +25,9 @@ class DersModel {
               .toList(),
     );
   }
+
+  @override
+  String toString() {
+    return "ID: $id";
+  }
 }

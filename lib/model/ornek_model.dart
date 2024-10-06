@@ -1,20 +1,20 @@
 import 'ders_color_model.dart';
 
-class Ornek {
+class OrnekModel {
   final String osm;
   final String lat;
   final bool hasDottedBorder;
   final DersColorModel colors; // DersColorModel olmalı
 
-  Ornek({
+  OrnekModel({
     required this.osm,
     required this.lat,
     required this.hasDottedBorder,
     required this.colors,
   });
 
-  factory Ornek.fromJson(Map<String, dynamic> json) {
-    return Ornek(
+  factory OrnekModel.fromJson(Map<String, dynamic> json) {
+    return OrnekModel(
       osm: json['osm'],
       lat: json['lat'],
       hasDottedBorder: json['hasDottedBorder'],

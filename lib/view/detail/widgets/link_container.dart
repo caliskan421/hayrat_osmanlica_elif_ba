@@ -13,6 +13,7 @@ class LinkContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 8),
+      margin: const EdgeInsets.symmetric(horizontal: 20),
       height: 60,
       width: 340,
       decoration: BoxDecoration(

@@ -57,19 +57,19 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
     });
   }
 
-  late final _$aktifDersAtom =
-      Atom(name: '_HomeViewModel.aktifDers', context: context);
+  late final _$aktifDersModelAtom =
+      Atom(name: '_HomeViewModel.aktifDersModel', context: context);
 
   @override
-  DersModel? get aktifDers {
-    _$aktifDersAtom.reportRead();
-    return super.aktifDers;
+  DersModel? get aktifDersModel {
+    _$aktifDersModelAtom.reportRead();
+    return super.aktifDersModel;
   }
 
   @override
-  set aktifDers(DersModel? value) {
-    _$aktifDersAtom.reportWrite(value, super.aktifDers, () {
-      super.aktifDers = value;
+  set aktifDersModel(DersModel? value) {
+    _$aktifDersModelAtom.reportWrite(value, super.aktifDersModel, () {
+      super.aktifDersModel = value;
     });
   }
 
@@ -168,7 +168,7 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
 konuList: ${konuList},
 aktifDersList: ${aktifDersList},
 aktifKonuModel: ${aktifKonuModel},
-aktifDers: ${aktifDers},
+aktifDersModel: ${aktifDersModel},
 aktifKonuId: ${aktifKonuId},
 aktifDersId: ${aktifDersId},
 isRika: ${isRika}

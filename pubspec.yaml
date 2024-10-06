@@ -73,6 +73,11 @@ flutter:
     - assets/icons/
     - assets/json_model/
 
+fonts:
+  - family: Hanzala
+    fonts:
+      - asset: assets/fonts/Hanzala.ttf
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
