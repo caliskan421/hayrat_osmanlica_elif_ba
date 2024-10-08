@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hayrat_osmanlica_elif_ba/core/extensions/theme_extension.dart';
 
 import '../theme/text_styles.dart';
 
@@ -32,7 +33,7 @@ class HarfContainer extends StatelessWidget {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: titleColor),
+            style: context.textTheme().bodyLarge!.copyWith(color: titleColor),
           ),
           Text(
             icon,

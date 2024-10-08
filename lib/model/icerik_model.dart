@@ -26,4 +26,6 @@ class IcerikModel {
           : [],
     );
   }
+
+  get harfMi => icerikType == "harf";
 }

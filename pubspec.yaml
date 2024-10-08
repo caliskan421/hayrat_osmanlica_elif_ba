@@ -78,6 +78,15 @@ fonts:
     fonts:
       - asset: assets/fonts/Hanzala.ttf
 
+  - family: BUTTON
+    fonts:
+      - asset: assets/fonts/BUTTON.TTF
+
+  - family: EkalemDuz
+    fonts:
+      - asset: assets/fonts/eKalemDuz_344.ttf
+
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

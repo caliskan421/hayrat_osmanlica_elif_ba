@@ -21,11 +21,13 @@ class TextStyles {
   static TextStyle bodySmall = GoogleFonts.poppins(
       textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w400));
   static TextStyle labelMedium = GoogleFonts.poppins(
-      textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600));
+    textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+  );
   static TextStyle labelSmall = GoogleFonts.poppins(
-      textStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500));
+    textStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
+  );
   static TextStyle matbu = const TextStyle(
-    fontFamily: 'Hanzala',
+    fontFamily: 'EkalemDuz',
     fontSize: 40,
     fontWeight: FontWeight.w300,
   );

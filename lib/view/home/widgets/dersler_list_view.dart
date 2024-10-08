@@ -38,6 +38,7 @@ class DerslerListView extends StatelessWidget {
                           child: GestureDetector(
                             onTap: () {
                               homeViewModel.aktifDersAta(index);
+                              homeViewModel.dersNo = index + 1;
                               context.pushNamed('detail');
                             },
                             child: Row(

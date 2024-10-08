@@ -1,16 +1,13 @@
-import 'dart:developer';
-
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gap/gap.dart';
-import 'package:go_router/go_router.dart';
-import 'package:flutter/material.dart';
+import 'package:hayrat_osmanlica_elif_ba/view/detail/widgets/app_bar.dart';
 import 'package:hayrat_osmanlica_elif_ba/core/extensions/theme_extension.dart';
-import 'package:hayrat_osmanlica_elif_ba/view/detail/detail_view_model.dart';
+import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 import '../../widget/harf_grid_view.dart';
-import '../home/home_view.dart';
-import 'widgets/hat_container.dart';
+import '../../theme/light_theme.dart';
 import 'widgets/link_container.dart';
+import '../home/home_view.dart';
+import 'detail_view_model.dart';
 
 final DetailViewModel detailViewModel = DetailViewModel();
 
@@ -22,8 +19,8 @@ class DetailView extends StatefulWidget {
 }
 
 class _DetailViewState extends State<DetailView> {
-  Color primaryColor = homeViewModel.aktifKonuModel!.colors.primaryColor!;
-  Color secondaryColor = homeViewModel.aktifKonuModel!.colors.secondaryColor!;
+  final Color primaryColor = homeViewModel.aktifKonuModel!.colors.primaryColor!;
+  final Color secondaryColor = homeViewModel.aktifKonuModel!.colors.secondaryColor!;
 
   @override
   void initState() {
@@ -34,73 +31,90 @@ class _DetailViewState extends State<DetailView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.all(18),
-          child: GestureDetector(
-            onTap: () {
-              context.pop();
-            },
-            child: SvgPicture.asset(
-              'assets/icons/arrow_back_ios.svg',
-              height: 10,
-              width: 10,
-            ),
-          ),
-        ),
-        actions: [
-          HatContainer(
-            primaryColor: primaryColor,
-            secondaryColor: secondaryColor,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 20, left: 16),
-            child: SvgPicture.asset(
-              'assets/icons/list_alt.svg',
-            ),
-          )
-        ],
-      ),
+      appBar: AppBarView(),
       body: CustomScrollView(
         slivers: [
           SliverPadding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 11),
             sliver: SliverAppBar(
-              floating: true,
+              floating: false,
               centerTitle: false,
               pinned: false,
               automaticallyImplyLeading: false,
+              toolbarHeight: 100,
               titleSpacing: 0,
-              title: Text(
-                detailViewModel.aktifDersModel!.title,
-                style: context.textTheme().titleLarge,
-                maxLines: 3,
+              title: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(4),
+                        decoration: BoxDecoration(
+                          color: secondaryColor,
+                          borderRadius: const BorderRadius.all(Radius.circular(4)),
+                        ),
+                        child: Text(
+                          "${homeViewModel.dersNo.toString()}.Ders",
+                          style: context
+                              .textTheme()
+                              .labelMedium!
+                              .copyWith(color: primaryColor),
+                        ),
+                      ),
+                      const Gap(8),
+                      Text(
+                        homeViewModel.aktifKonuModel!.title,
+                        style: context
+                            .textTheme()
+                            .headlineSmall!
+                            .copyWith(color: AppColors.outline),
+                      ),
+                    ],
+                  ),
+                  const Gap(5),
+                  Text(
+                    detailViewModel.aktifDersModel!.title,
+                    style: context.textTheme().titleLarge,
+                    maxLines: 3,
+                  ),
+                ],
               ),
             ),
           ),
           SliverList(
-            delegate: SliverChildListDelegate([
-              LinkContainer(color: primaryColor),
-              const Gap(10),
-            ]),
+            delegate: SliverChildListDelegate(
+              [
+                LinkContainer(color: primaryColor),
+                const Gap(10),
+              ],
+            ),
           ),
-          SliverFillRemaining(
-            child: HarfGridView(),
+          SliverList.builder(
+            itemCount: homeViewModel.aktifDersModel!.icerikler!.length,
+            itemBuilder: (context, index) {
+              final model = homeViewModel.aktifDersModel!.icerikler![index];
+
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    child: Text(
+                      model.konu.toString(),
+                      style: context.textTheme().bodyMedium,
+                    ),
+                  ),
+                  if (model.harfMi)
+                    Flexible(
+                      child: HarfGridView(incerikIndex: index),
+                    ),
+                ],
+              );
+            },
           ),
         ],
       ),
     );
   }
 }
-
-/*
- Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-
-
-          ],
-        ),
-      ),
-*/

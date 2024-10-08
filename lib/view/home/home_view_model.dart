@@ -44,6 +44,9 @@ abstract class _HomeViewModel with Store {
   @observable
   bool isRika = false;
 
+  @observable
+  int? dersNo;
+
   @action
   Future<void> init() async {
     // Konu ve ders listelerini temizleyerek başla

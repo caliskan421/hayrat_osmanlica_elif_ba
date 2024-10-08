@@ -5,33 +5,39 @@ import 'package:hayrat_osmanlica_elif_ba/widget/harf_container.dart';
 import '../model/ornek_model.dart';
 
 class HarfGridView extends StatelessWidget {
-  HarfGridView({
-    super.key,
-  });
-  final List<OrnekModel> a = detailViewModel.aktifDersModel!.icerikler![0].ornek!;
+  const HarfGridView({super.key, required this.incerikIndex});
+
+  final int incerikIndex;
+
   @override
   Widget build(BuildContext context) {
+    final List<OrnekModel> ornekModelList =
+        detailViewModel.aktifDersModel!.icerikler![incerikIndex].ornek!;
     return Directionality(
       textDirection: TextDirection.rtl,
-      child: GridView.builder(
-        padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
-        shrinkWrap: true,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3, // her satırdaki öğe sayısı
-          mainAxisSpacing: 12, // satırlar arasındaki boşluk
-          crossAxisSpacing: 12, // sütunlar arasındaki boşluk
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        child: GridView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3, // Her satırdaki öğe sayısı
+            mainAxisSpacing: 12, // Satırlar arasındaki boşluk
+            crossAxisSpacing: 12, // Sütunlar arasındaki boşluk
+            childAspectRatio: 1.0, // Her bir öğenin en-boy oranı
+          ),
+          itemCount: ornekModelList.length,
+          itemBuilder: (context, index) {
+            return HarfContainer(
+              title: ornekModelList[index].lat,
+              icon: ornekModelList[index].osm,
+              isDottedBorder: false,
+              color: ornekModelList[index].colors.contColor!,
+              titleColor: ornekModelList[index].colors.latColor!,
+              iconColor: ornekModelList[index].colors.osmColor!,
+            );
+          },
         ),
-        itemCount: a.length,
-        itemBuilder: (context, index) {
-          return HarfContainer(
-            title: a[index].lat,
-            icon: a[index].osm,
-            isDottedBorder: false,
-            color: a[index].colors.contColor!,
-            titleColor: a[index].colors.latColor!,
-            iconColor: a[index].colors.osmColor!,
-          );
-        },
       ),
     );
   }
