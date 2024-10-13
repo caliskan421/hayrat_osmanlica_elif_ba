@@ -2,9 +2,12 @@ import 'package:hayrat_osmanlica_elif_ba/view/detail/widgets/app_bar.dart';
 import 'package:hayrat_osmanlica_elif_ba/core/extensions/theme_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:hayrat_osmanlica_elif_ba/widget/birlesim_list_view.dart';
 
 import '../../widget/harf_grid_view.dart';
 import '../../theme/light_theme.dart';
+import '../../widget/sayi_list_view.dart';
+import '../../widget/sonraki_ders_container.dart';
 import 'widgets/link_container.dart';
 import '../home/home_view.dart';
 import 'detail_view_model.dart';
@@ -44,6 +47,7 @@ class _DetailViewState extends State<DetailView> {
               toolbarHeight: 100,
               titleSpacing: 0,
               title: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
@@ -109,9 +113,23 @@ class _DetailViewState extends State<DetailView> {
                     Flexible(
                       child: HarfGridView(incerikIndex: index),
                     ),
+                  if (model.sayiMi)
+                    const Flexible(
+                      child: SayiListView(),
+                    )
                 ],
               );
             },
+          ),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Image.asset('assets/icons/line.png'),
+                const Gap(10),
+                const SonrakiDersContainer(),
+                const Gap(30),
+              ],
+            ),
           ),
         ],
       ),

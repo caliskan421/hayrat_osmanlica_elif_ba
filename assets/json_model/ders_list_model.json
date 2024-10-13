@@ -6,7 +6,408 @@
     "icerik": [
       {
         "konu": "Osmanlıcadaki harfler ekseriya Kur’an’dan alınmıştır. Kırmızı renkli harfler Türkçe asıllı kelimelerde kullanılmaz. Mor renkli harfler, Farsçadan, yeşil renkli “Nef” harfi Türkçeden gelmiştir.",
-        "icerik_type": "harf",
+        "icerikType": "harf",
+        "hatGecisAcikMi": false,
+        "ornek": [
+          {
+            "osm": "ا",
+            "lat": "Elif",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ب",
+            "lat": "Be",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "پ",
+            "lat": "Pe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ت",
+            "lat": "Te",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ث",
+            "lat": "Se",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "ج",
+            "lat": "Cim",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "چ",
+            "lat": "Çe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ح",
+            "lat": "Ha",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "خ",
+            "lat": "Hı",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "د",
+            "lat": "Dal",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ذ",
+            "lat": "Zel",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "ر",
+            "lat": "Ra",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ز",
+            "lat": "Ze",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ژ",
+            "lat": "Je",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "س",
+            "lat": "Sin",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ش",
+            "lat": "Şın",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ص",
+            "lat": "Sad",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ض",
+            "lat": "Dat",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "ط",
+            "lat": "Tı",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ظ",
+            "lat": "Zı",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "ع",
+            "lat": "Ayın",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
+            }
+          },
+          {
+            "osm": "غ",
+            "lat": "Gayın",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ف",
+            "lat": "Fe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ق",
+            "lat": "Kaf",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ك",
+            "lat": "Kef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ك",
+            "lat": "Gef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ڭ",
+            "lat": "Nef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "fourth",
+              "osm": "fourth",
+              "cont": "fourthContainer"
+            }
+          },
+          {
+            "osm": "ل",
+            "lat": "Lam",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "م",
+            "lat": "Mim",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ن",
+            "lat": "Nun",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "و",
+            "lat": "Vav",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ە",
+            "lat": "He",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          },
+          {
+            "osm": "ی",
+            "lat": "Ye",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
+            }
+          }
+        ]
+      },
+      {
+        "konu": "Osmanlıcada bulunup da Kur’ân harflerinde olmayan harfler",
+        "icerikType": "harf",
+        "hatGecisAcikMi": false,
+        "ornek": [
+          {
+            "osm": "پ",
+            "lat": "Pe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "چ",
+            "lat": "Çe",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ژ",
+            "lat": "Je",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ك",
+            "lat": "Gef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "tertiary",
+              "osm": "tertiary",
+              "cont": "tertiaryContainer"
+            }
+          },
+          {
+            "osm": "ڭ",
+            "lat": "Nef",
+            "hasDottedBorder": false,
+            "colors": {
+              "lat": "fourth",
+              "osm": "fourth",
+              "cont": "fourthContainer"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Harflerin Rik’a Hattı Yazılışları",
+    "link": "",
+    "icerik": [
+      {
+        "konu": "Rik’a hattında iki noktalar çizgi (-), üç noktalı harfler ise takke (^) ile gösterilir.",
+        "icerikType": "harf",
         "hatGecisAcikMi": false,
         "ornek": [
           {
@@ -342,58 +743,48 @@
         ]
       },
       {
-        "konu": "Osmanlıcada bulunup da Kur’ân harflerinde olmayan harfler",
-        "icerik_type": "harf",
+        "konu": "Kesikli çizgi içine alınan 'Şın', 'Dat', 'Kaf' ve 'Nun' harflerinin noktaları, el yazısında harfin sonuna kuyruk olarak eklenir.",
+        "icerikType": "harf",
         "hatGecisAcikMi": false,
         "ornek": [
           {
-            "osm": "پ",
-            "lat": "Pe",
+            "osm": "ش",
+            "lat": "Şın",
             "hasDottedBorder": false,
             "colors": {
-              "lat": "tertiary",
-              "osm": "tertiary",
-              "cont": "tertiaryContainer"
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
             }
           },
           {
-            "osm": "چ",
-            "lat": "Çe",
+            "osm": "ض",
+            "lat": "Dat",
             "hasDottedBorder": false,
             "colors": {
-              "lat": "tertiary",
-              "osm": "tertiary",
-              "cont": "tertiaryContainer"
+              "lat": "secondary",
+              "osm": "secondary",
+              "cont": "secondaryContainer"
             }
           },
           {
-            "osm": "ژ",
-            "lat": "Je",
+            "osm": "ق",
+            "lat": "Kaf",
             "hasDottedBorder": false,
             "colors": {
-              "lat": "tertiary",
-              "osm": "tertiary",
-              "cont": "tertiaryContainer"
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
             }
           },
           {
-            "osm": "ك",
-            "lat": "Gef",
+            "osm": "ن",
+            "lat": "Nun",
             "hasDottedBorder": false,
             "colors": {
-              "lat": "tertiary",
-              "osm": "tertiary",
-              "cont": "tertiaryContainer"
-            }
-          },
-          {
-            "osm": "ڭ",
-            "lat": "Nef",
-            "hasDottedBorder": false,
-            "colors": {
-              "lat": "fourth",
-              "osm": "fourth",
-              "cont": "fourthContainer"
+              "lat": "outline",
+              "osm": "onSurface",
+              "cont": "surface"
             }
           }
         ]
@@ -401,22 +792,332 @@
     ]
   },
   {
-    "id": 2,
-    "title": "Harflerin Rik’a Hattı Yazılışları",
-    "link": "",
-    "icerik": null
-  },
-  {
     "id": 3,
-    "title": "Harflerin Birleşim Halleri",
-    "icerik": null,
-    "link": ""
+    "title": "Rakamlar ve Sayılar",
+    "link": "",
+    "icerik": [
+      {
+        "konu": "Osmanlıcadaki rakamlar, günümüz Türkçesinde kullanılan rakamlarla aynı özellikleri taşır. Sayılar ise Osmanlıca yazının tersine soldan sağa doğru yazılır ve okunurlar.",
+        "icerikType": "sayi",
+        "hatGecisAcikMi": true,
+        "ornek": [
+          [
+            {
+              "osm": "١",
+              "lat": "1",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٢",
+              "lat": "2",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٣",
+              "lat": "3",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٤",
+              "lat": "4",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٥",
+              "lat": "5",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٦",
+              "lat": "6",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٧",
+              "lat": "7",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٨",
+              "lat": "8",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٩",
+              "lat": "9",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٠",
+              "lat": "10",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            }
+          ],
+          [
+            {
+              "osm": "١١",
+              "lat": "11",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٢",
+              "lat": "12",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٣",
+              "lat": "13",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٤",
+              "lat": "14",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٥",
+              "lat": "15",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٦",
+              "lat": "16",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٧",
+              "lat": "17",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٨",
+              "lat": "18",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٩",
+              "lat": "19",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٢٠",
+              "lat": "20",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            }
+          ],
+          [
+            {
+              "osm": "١٠",
+              "lat": "10",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٢٠",
+              "lat": "20",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٣٠",
+              "lat": "30",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٤٠",
+              "lat": "40",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٥٠",
+              "lat": "50",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٦٠",
+              "lat": "60",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٧٠",
+              "lat": "70",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٨٠",
+              "lat": "80",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "٩٠",
+              "lat": "90",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            },
+            {
+              "osm": "١٠٠",
+              "lat": "100",
+              "hasDottedBorder": false,
+              "colors": {
+                "lat": "outline",
+                "osm": "onSurface",
+                "cont": "surface"
+              }
+            }
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": 4,
-    "title": "Rakamlar ve Sayılar",
-    "icerik": null,
-    "link": ""
+    "title": "Harflerin Birleşim Halleri",
+    "link": "",
+    "icerik": [
+      {}
+    ]
   },
   {
     "id": 5,
