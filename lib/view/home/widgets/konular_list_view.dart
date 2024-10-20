@@ -1,8 +1,7 @@
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../../theme/light_theme.dart';
+import 'package:hayrat_osmanlica_elif_ba/core/extensions/theme_extension.dart';
 import '../home_view.dart';
 
 class KonularListView extends StatelessWidget {
@@ -17,6 +16,7 @@ class KonularListView extends StatelessWidget {
           final aktifModel = homeViewModel.aktifKonuModel;
 
           return ListView.builder(
+            padding: const EdgeInsets.only(left: 24),
             scrollDirection: Axis.horizontal,
             itemCount: homeViewModel.konuList.length,
             itemBuilder: (cotext, index) {
@@ -36,12 +36,12 @@ class KonularListView extends StatelessWidget {
                       height: 106,
 
                       /// Todo --> Kutu boyutlarını düzenle...
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
                       decoration: BoxDecoration(
                         borderRadius: const BorderRadius.all(Radius.circular(10)),
                         color: aktifmi
                             ? konuModel.colors.primaryColor
-                            : AppColors.surfaceBright,
+                            : context.colorScheme().surfaceBright,
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -57,15 +57,19 @@ class KonularListView extends StatelessWidget {
                             return SvgPicture.asset(
                               'assets/icons/$icon.svg',
                               // Todo --> change color with [Theme]...
-                              color: aktifmi ? AppColors.background : AppColors.onSurface,
+                              color: aktifmi
+                                  ? context.colorScheme().scrim
+                                  : context.colorScheme().onSurface,
                               fit: BoxFit.none,
                             );
                           }),
                           Text(
                             konuModel.title,
-                            style: Theme.of(context).textTheme.headlineSmall!.copyWith(
-                                  color:
-                                      aktifmi ? AppColors.background : AppColors.outline,
+                            style: cotext.textTheme().headlineSmall?.copyWith(
+                                  color: aktifmi
+                                      ? context.colorScheme().scrim
+                                      : context.colorScheme().outline,
+                                  fontWeight: aktifmi ? FontWeight.w600 : FontWeight.w400,
                                 ),
                             textAlign: TextAlign.center,
                           ),

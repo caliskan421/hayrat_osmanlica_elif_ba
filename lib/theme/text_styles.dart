@@ -13,7 +13,7 @@ class TextStyles {
   static TextStyle headlineMedium = GoogleFonts.readexPro(
       textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400));
   static TextStyle headlineSmall = GoogleFonts.poppins(
-      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500));
+      textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400));
   static TextStyle bodyLarge = GoogleFonts.poppins(
       textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400));
   static TextStyle bodyMedium = GoogleFonts.poppins(
@@ -27,7 +27,7 @@ class TextStyles {
     textStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500),
   );
   static TextStyle matbu = const TextStyle(
-    fontFamily: 'EkalemDuz',
+    fontFamily: 'Hanzala',
     fontSize: 40,
     fontWeight: FontWeight.w300,
   );
@@ -36,6 +36,7 @@ class TextStyles {
     fontWeight: FontWeight.w300,
   );
   static TextStyle rikaKelimeler = const TextStyle(
+    fontFamily: 'BUTTON',
     fontSize: 30,
     fontWeight: FontWeight.w300,
   );

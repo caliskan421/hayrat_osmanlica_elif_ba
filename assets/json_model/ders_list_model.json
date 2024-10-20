@@ -1116,145 +1116,1213 @@
     "title": "Harflerin Birleşim Halleri",
     "link": "",
     "icerik": [
-      {}
+      {
+        "konu": "Elif, Dal, Zel, Ra, Ze, Je ve Vav harfleri kendisinden önceki harfle bitişir. Fakat kendisinden sonraki harflere bitişmez.",
+        "icerikType": "birlesim",
+        "hatGecisAcikMi": true,
+        "ornek": [
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ا"
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ا",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ل",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "م",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "okutucuHarfColor"
+                  }
+                ]
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": null
+            }
+          },
+          {
+            "colors": {
+              "okutucuContainerColor": "secondaryContainer",
+              "ornekContainerColor": "surface",
+              "okutucuHarfColor": "secondary",
+              "harfColor": "onSurface"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ر",
+                "ز",
+                "ژ"
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ر",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "پ",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "و",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "okutucuHarfColor"
+                  }
+                ]
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": null
+            }
+          },
+          {
+            "colors": {
+              "okutucuContainerColor": "secondaryContainer",
+              "ornekContainerColor": "surface",
+              "okutucuHarfColor": "secondary",
+              "harfColor": "onSurface"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "د"
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "د",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "د",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "م",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ز",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": null
+            }
+          },
+          {
+            "colors": {
+              "okutucuContainerColor": "secondaryContainer",
+              "ornekContainerColor": "surface",
+              "okutucuHarfColor": "secondary",
+              "harfColor": "onSurface"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "و"
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ب",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "و",
+                    "color": "okutucuHarfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "و",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "و",
+                    "color": "okutucuHarfColor"
+                  }
+                ]
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": null
+            }
+          }
+        ]
+      },
+      {
+        "konu": "Kesikli çizgi içine alınan 'Şın', 'Dat', 'Kaf' ve 'Nun' harflerinin noktaları, el yazısında harfin sonuna kuyruk olarak eklenir.",
+        "icerikType": "birlesim",
+        "hatGecisAcikMi": true,
+        "ornek": [
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ب"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ب",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "پ",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ت",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ث",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ب",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ب",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "د",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "س"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ش",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ش",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "س",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "س",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ج"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ج",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "چ",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "خ",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "چ",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "م",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ە",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ج",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ك",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ص"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ض",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ض",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ص",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ص",
+                    "color": "okutucuHarfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ط"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ظ",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ط",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "و",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ط",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ە",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ط",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "okutucuHarfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "غ"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "غ",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ع",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "غ",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ص",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "غ",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "م",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ق",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ب",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "غ",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ل",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ف"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ق",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ف",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ق",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "س",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ف",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ق",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ك"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ك",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ك",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ك",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ب",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ك",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ل",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ه",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ك",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "د",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ك",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ل",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ل"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ل",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ل",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ل",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ك",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "گ",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ل",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "م"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "م",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "م",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "م",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "م",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ك",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "م",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "م",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ە",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ل",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ت",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ن"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ن",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ن",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ن",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ج",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ە",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ن",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "چ",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "و",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ن",
+                    "color": "okutucuHarfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ی"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ی",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ی",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "okutucuHarfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ی",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "و",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ق",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ی",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "م",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ك",
+                    "color": "harfColor"
+                  }
+                ]
+              ]
+            }
+          },
+          {
+            "colors": {
+              "harfColor": "onSurface",
+              "okutucuHarfColor": "secondary",
+              "ornekContainerColor": "surface",
+              "okutucuContainerColor": "secondaryContainer"
+            },
+            "okutucuContainer": {
+              "harfList": [
+                "ه"
+              ]
+            },
+            "birlesimContainer": {
+              "harfList": [
+                {
+                  "harf": "ه",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ه",
+                  "color": "harfColor"
+                },
+                {
+                  "harf": "ه",
+                  "color": "harfColor"
+                }
+              ]
+            },
+            "ornekContainer": {
+              "harfList": [
+                [
+                  {
+                    "harf": "ه",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ر",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ه",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ا",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ن",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ك",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ی",
+                    "color": "harfColor"
+                  }
+                ],
+                [
+                  {
+                    "harf": "ت",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ه",
+                    "color": "okutucuHarfColor"
+                  },
+                  {
+                    "harf": "ل",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ك",
+                    "color": "harfColor"
+                  },
+                  {
+                    "harf": "ه",
+                    "color": "okutucuHarfColor"
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      }
     ]
   },
   {
     "id": 5,
     "title": "Osmanlıca Okutucu Harfler",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 6,
     "title": "\"Elif\" Okutucusu Örnekleri",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 7,
     "title": "\"He\" Okutucusunun A Sesiyle Okuttuğu Yerler",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 8,
     "title": "\"He\" Okutucusu Örnekleri",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 9,
     "title": "Kalın ve İnce Karşılığı Olan Harfler",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 10,
     "title": "Siyak-Sibak Meselesi",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 11,
     "title": "\"Vav\" Okutucusu Örnekleri",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 12,
     "title": "\"Ye\" Okutucusu Örnekleri",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 13,
     "title": "Kâf-ı Arabî",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 14,
     "title": "Kâf-ı Farisî",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 15,
     "title": "Kâf-ı Nunî (Hazal Ne, Nef)",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 16,
     "title": "Kâf-ı Yayî (Vavî)",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 17,
     "title": "Okuma Kolaylığı Sağlayacak Bazı Kurallar",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 18,
     "title": "Kelime İçinde Kalın Sesler",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 19,
     "title": "Klişeleşmiş Bazı Kelimeler",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 20,
     "title": "Türkçeye Yerleşmiş Bazı Arapça Kelimeler",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 21,
     "title": "Türkçeye Yerleşmiş Bazı Farsça Kelimeler",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 22,
     "title": "Kalın İnce Okunuşa Göre Yazılımı",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 23,
     "title": "Kendisinden Sonraki Hafle Birleşmeyen Harfler",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 24,
     "title": "Atasözleri 1",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 25,
     "title": "Atasözleri 2",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 26,
     "title": "Atasözleri 3",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   },
   {
     "id": 27,
     "title": "Atasözleri 4",
-    "icerik": null,
+    "icerik": [],
     "link": ""
   }
 ]

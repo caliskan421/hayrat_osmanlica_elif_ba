@@ -1,14 +1,24 @@
-import 'package:hayrat_osmanlica_elif_ba/model/ornek_models/harf_ornek_model.dart';
+import '../color_models/sayi_color_model.dart';
 
 class SayiOrnekModel {
-  List<dynamic> ornekList;
+  final String osm;
+  final String lat;
+  final bool hasDottedBorder;
+  final SayiColorModel colors;
 
-  SayiOrnekModel({required this.ornekList});
+  SayiOrnekModel({
+    required this.osm,
+    required this.lat,
+    required this.hasDottedBorder,
+    required this.colors,
+  });
 
-  // Tüm listeyi HarfOrnekModel'e çeviren metot
-  List<HarfOrnekModel> toHarfModelList() {
-    return ornekList.map((dynamic item) {
-      return HarfOrnekModel.fromJson(item);
-    }).toList();
+  factory SayiOrnekModel.fromJson(Map<String, dynamic> json) {
+    return SayiOrnekModel(
+      osm: json['osm'] ?? '',
+      lat: json['lat'] ?? '',
+      hasDottedBorder: json['hasDottedBorder'] ?? false,
+      colors: SayiColorModel.fromJson(json['colors'] ?? {}),
+    );
   }
 }

@@ -121,6 +121,22 @@ mixin _$HomeViewModel on _HomeViewModel, Store {
     });
   }
 
+  late final _$dersNoAtom =
+      Atom(name: '_HomeViewModel.dersNo', context: context);
+
+  @override
+  int? get dersNo {
+    _$dersNoAtom.reportRead();
+    return super.dersNo;
+  }
+
+  @override
+  set dersNo(int? value) {
+    _$dersNoAtom.reportWrite(value, super.dersNo, () {
+      super.dersNo = value;
+    });
+  }
+
   late final _$initAsyncAction =
       AsyncAction('_HomeViewModel.init', context: context);
 
@@ -171,7 +187,8 @@ aktifKonuModel: ${aktifKonuModel},
 aktifDersModel: ${aktifDersModel},
 aktifKonuId: ${aktifKonuId},
 aktifDersId: ${aktifDersId},
-isRika: ${isRika}
+isRika: ${isRika},
+dersNo: ${dersNo}
     ''';
   }
 }

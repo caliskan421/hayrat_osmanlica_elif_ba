@@ -4,23 +4,16 @@ import 'package:mobx/mobx.dart';
 import '../../model/konu_model.dart';
 import '../../model/ders_model.dart';
 
-/// Service
-import '../../service/konu_model_list_service.dart';
-import '../../service/konu_state_serive.dart';
-import '../../service/ders_model_list_service.dart';
-import '../../service/ders_state_servcice.dart';
-import '../../service/hat_state_service.dart';
+import '../../service/ders_service.dart';
+import '../../service/konu_service.dart';
 
 part 'home_view_model.g.dart';
 
 class HomeViewModel = _HomeViewModel with _$HomeViewModel;
 
 abstract class _HomeViewModel with Store {
-  final KonuModelListService _konuListService = KonuModelListService();
-  final HatStateService _hatStateService = HatStateService();
-  final KonuStateService _konuStateService = KonuStateService();
-  final DersStateService _dersStateService = DersStateService();
-  final DersModelListService _dersListService = DersModelListService();
+  final KonuService _konuListService = KonuService();
+  final DersService _dersListService = DersService();
 
   @observable
   ObservableList<KonuModel> konuList = ObservableList.of([]);
@@ -54,10 +47,10 @@ abstract class _HomeViewModel with Store {
     //aktifKonuModel = null;
 
     // isRika durumunu kaydedilmiş halinden al
-    isRika = await _hatStateService.getIsRika();
+    isRika = await _dersListService.getIsRika();
 
     // Son kaydedilen aktif dersin ID'sini al
-    aktifDersId = await _dersStateService.getDersId();
+    aktifDersId = await _dersListService.getDersId();
 
     // Tüm konuları JSON'dan yükle
     final konular = await _konuListService.fetchKonularFromJson();
@@ -82,7 +75,7 @@ abstract class _HomeViewModel with Store {
 
     // Eğer aktif ders yoksa veya aktif dersin konusunu bulamadıysak, en son kaydedilen aktif konuyu yükle
     if (aktifKonuModel == null) {
-      final sonKonuId = await _konuStateService.getKonuId();
+      final sonKonuId = await _konuListService.getKonuId();
       aktifKonuModel = konuList[sonKonuId];
       final dersler = await fetchDerslerForKonu(aktifKonuModel!);
       aktifDersList = ObservableList.of(dersler);
@@ -95,7 +88,7 @@ abstract class _HomeViewModel with Store {
     aktifKonuModel = konuList[index];
 
     /// aktifKonu'yu [Id]si uzerinden locale kaydediyoruz
-    _konuStateService.saveKonuId(index);
+    _konuListService.saveKonuId(index);
 
     /// Seçilen konunun derslerini çek ve güncelle
     final dersler = await fetchDerslerForKonu(aktifKonuModel!);
@@ -104,7 +97,6 @@ abstract class _HomeViewModel with Store {
 
   @action
   Future<void> aktifDersAta(int index) async {
-    //log("Aktif ders ID: $aktifDersId");
     aktifDersId = aktifKonuModel!.dersIdleri[index];
 
     /// DersModel'i async olarak [fetchDersById] ile çekiyoruz
@@ -114,18 +106,18 @@ abstract class _HomeViewModel with Store {
     aktifDersModel = DersModel.fromJson(dersJson);
 
     /// aktifDers'i [Id]si uzerinden locale kaydediyoruz
-    _dersStateService.saveDersId(aktifDersId!);
+    _dersListService.saveDersId(aktifDersId!);
   }
 
   @action
   Future<void> setRika() async {
     isRika = !isRika;
-    await _hatStateService.saveIsRika(isRika);
+    await _dersListService.saveIsRika(isRika);
   }
 
   @action
   Future<List<DersModel>> fetchDerslerForKonu(KonuModel konu) async {
-    /// Secilen konuya gore id ders id'leri uzerinden
+    /// Secilen konuya gore ders id'leri uzerinden
     /// o konu altinda yer alan dersleri DerModele donusturup
     /// List seklinde donduren method...
     List<DersModel> dersModels = [];

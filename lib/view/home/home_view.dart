@@ -27,35 +27,37 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          SvgPicture.asset('assets/icons/menu.svg', width: 24),
+          SvgPicture.asset('assets/icons/menu.svg', width: 18),
           const SizedBox(width: 20)
         ],
+        leadingWidth: 65,
         leading: Padding(
           padding: const EdgeInsets.only(left: 20),
           child: GestureDetector(
             onTap: homeViewModel.setRika,
             child: SvgPicture.asset(
               'assets/icons/marka.svg',
-              // Todo --> Svg boyutunu ayarla
-              width: 50,
             ),
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Konular", style: Theme.of(context).textTheme.titleMedium),
-            const Gap(12),
-            const KonularListView(),
-            const Gap(36),
-            Text("Dersler", style: Theme.of(context).textTheme.titleSmall),
-            const Gap(36),
-            const DerslerListView()
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 24, top: 20),
+            child: Text("Konular", style: Theme.of(context).textTheme.titleMedium),
+          ),
+          const Gap(12),
+          const KonularListView(),
+          const Gap(32),
+          Padding(
+            padding: const EdgeInsets.only(left: 24),
+            child: Text("Dersler", style: Theme.of(context).textTheme.titleSmall),
+          ),
+          const Gap(30),
+          const DerslerListView()
+        ],
       ),
     );
   }

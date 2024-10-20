@@ -29,11 +29,11 @@ mixin _$DetailViewModel on _DetailViewModel, Store {
       ActionController(name: '_DetailViewModel', context: context);
 
   @override
-  void init() {
+  void init(DersModel dersModel) {
     final _$actionInfo = _$_DetailViewModelActionController.startAction(
         name: '_DetailViewModel.init');
     try {
-      return super.init();
+      return super.init(dersModel);
     } finally {
       _$_DetailViewModelActionController.endAction(_$actionInfo);
     }

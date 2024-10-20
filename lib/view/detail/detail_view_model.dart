@@ -1,5 +1,4 @@
 import 'package:hayrat_osmanlica_elif_ba/model/ders_model.dart';
-import 'package:hayrat_osmanlica_elif_ba/view/home/home_view.dart';
 import 'package:mobx/mobx.dart';
 
 part 'detail_view_model.g.dart';
@@ -11,7 +10,7 @@ abstract class _DetailViewModel with Store {
   DersModel? aktifDersModel;
 
   @action
-  void init() {
-    aktifDersModel = homeViewModel.aktifDersModel!;
+  void init(DersModel dersModel) {
+    aktifDersModel = dersModel;
   }
 }

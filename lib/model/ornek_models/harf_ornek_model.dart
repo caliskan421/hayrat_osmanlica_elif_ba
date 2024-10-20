@@ -1,10 +1,10 @@
-import '../ders_color_model.dart';
+import '../color_models/ders_color_model.dart';
 
 class HarfOrnekModel {
   final String osm;
   final String lat;
   final bool hasDottedBorder;
-  final DersColorModel colors; // DersColorModel olmalı
+  final DersColorModel colors;
 
   HarfOrnekModel({
     required this.osm,
@@ -19,7 +19,7 @@ class HarfOrnekModel {
       lat: json['lat'] ?? '',
       hasDottedBorder: json['hasDottedBorder'] ?? false,
       colors: json['colors'] != null
-          ? DersColorModel.fromDersModelJson(json['colors'])
+          ? DersColorModel.fromJson(json['colors'])
           : DersColorModel(),
     );
   }

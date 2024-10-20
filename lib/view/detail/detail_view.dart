@@ -1,11 +1,15 @@
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hayrat_osmanlica_elif_ba/model/icerik_models/birlesim_icerik_model.dart';
+import 'package:hayrat_osmanlica_elif_ba/model/icerik_models/harf_icerik_model.dart';
+import 'package:hayrat_osmanlica_elif_ba/model/icerik_models/sayi_icerik_model.dart';
 import 'package:hayrat_osmanlica_elif_ba/view/detail/widgets/app_bar.dart';
 import 'package:hayrat_osmanlica_elif_ba/core/extensions/theme_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:hayrat_osmanlica_elif_ba/widget/birlesim_list_view.dart';
 
+import '../../model/ders_model.dart';
 import '../../widget/harf_grid_view.dart';
-import '../../theme/light_theme.dart';
 import '../../widget/sayi_list_view.dart';
 import '../../widget/sonraki_ders_container.dart';
 import 'widgets/link_container.dart';
@@ -15,7 +19,9 @@ import 'detail_view_model.dart';
 final DetailViewModel detailViewModel = DetailViewModel();
 
 class DetailView extends StatefulWidget {
-  const DetailView({super.key});
+  const DetailView({super.key, required this.aktifDersModel});
+
+  final DersModel aktifDersModel;
 
   @override
   State<DetailView> createState() => _DetailViewState();
@@ -28,7 +34,7 @@ class _DetailViewState extends State<DetailView> {
   @override
   void initState() {
     super.initState();
-    detailViewModel.init();
+    detailViewModel.init(widget.aktifDersModel);
   }
 
   @override
@@ -38,13 +44,16 @@ class _DetailViewState extends State<DetailView> {
       body: CustomScrollView(
         slivers: [
           SliverPadding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 11),
+            padding: const EdgeInsets.symmetric(horizontal: 24),
             sliver: SliverAppBar(
               floating: false,
               centerTitle: false,
               pinned: false,
               automaticallyImplyLeading: false,
-              toolbarHeight: 100,
+
+              /// Todo --> Sbt yokseklik olmamali
+              toolbarHeight: 210,
+              stretch: true,
               titleSpacing: 0,
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,51 +80,53 @@ class _DetailViewState extends State<DetailView> {
                         style: context
                             .textTheme()
                             .headlineSmall!
-                            .copyWith(color: AppColors.outline),
+                            .copyWith(color: context.colorScheme().outline),
                       ),
                     ],
                   ),
-                  const Gap(5),
+                  const Gap(4),
                   Text(
                     detailViewModel.aktifDersModel!.title,
                     style: context.textTheme().titleLarge,
                     maxLines: 3,
                   ),
+                  const Gap(16),
+                  LinkContainer(color: primaryColor),
                 ],
               ),
             ),
           ),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                LinkContainer(color: primaryColor),
-                const Gap(10),
-              ],
-            ),
-          ),
           SliverList.builder(
-            itemCount: homeViewModel.aktifDersModel!.icerikler!.length,
+            itemCount: detailViewModel.aktifDersModel!.icerikler!.length,
             itemBuilder: (context, index) {
-              final model = homeViewModel.aktifDersModel!.icerikler![index];
+              final model = detailViewModel.aktifDersModel!.icerikler![index];
 
               return Column(
                 mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                    padding: const EdgeInsets.only(right: 24, left: 24, bottom: 32),
                     child: Text(
                       model.konu.toString(),
                       style: context.textTheme().bodyMedium,
                     ),
                   ),
-                  if (model.harfMi)
+                  if (model is HarfIcerikModel)
                     Flexible(
-                      child: HarfGridView(incerikIndex: index),
+                      child: HarfGridView(
+                        harfIcerikModel: model,
+                      ),
                     ),
-                  if (model.sayiMi)
-                    const Flexible(
-                      child: SayiListView(),
+                  if (model is SayiIcerikModel)
+                    Flexible(
+                      child: SayiListView(
+                        sayiIcerikModel: model,
+                      ),
+                    ),
+                  if (model is BirlesimIcerikModel)
+                    Flexible(
+                      child: BirlesimListView(birlesimIcerikModel: model),
                     )
                 ],
               );
@@ -124,10 +135,10 @@ class _DetailViewState extends State<DetailView> {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                Image.asset('assets/icons/line.png'),
-                const Gap(10),
+                SvgPicture.asset('assets/icons/line.svg'),
+                const Gap(40),
                 const SonrakiDersContainer(),
-                const Gap(30),
+                const Gap(40),
               ],
             ),
           ),

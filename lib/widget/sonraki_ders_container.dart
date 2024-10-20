@@ -10,16 +10,25 @@ class SonrakiDersContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(24),
       child: GestureDetector(
         onTap: () {},
         child: Container(
           padding: const EdgeInsets.all(15),
           height: 215,
           width: 345,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(Radius.circular(12)),
-            color: AppColors.surfaceBright,
+          decoration: BoxDecoration(
+            color: context.colorScheme().surfaceBright,
+            borderRadius: BorderRadius.circular(10.0),
+            border: Border.all(color: context.colorScheme().scrim),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                spreadRadius: 0,
+                blurRadius: 0,
+                offset: const Offset(0, 4),
+              ),
+            ],
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +37,7 @@ class SonrakiDersContainer extends StatelessWidget {
               siradakiDers(context),
               sonrakiKonu(context),
               sonrakiDers(context),
-              nextCircleAvatar(),
+              nextCircleAvatar(context),
             ],
           ),
         ),
@@ -38,16 +47,18 @@ class SonrakiDersContainer extends StatelessWidget {
 
   Container siradakiDers(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 5),
+      padding: const EdgeInsets.symmetric(vertical: 5),
       width: 110,
-      decoration: const BoxDecoration(
-        color: AppColors.primary,
-        borderRadius: BorderRadius.all(Radius.circular(4)),
+      decoration: BoxDecoration(
+        color: context.colorScheme().primary,
+        borderRadius: const BorderRadius.all(Radius.circular(4)),
       ),
       child: Center(
         child: Text(
           "Sıradaki Ders",
-          style: context.textTheme().labelMedium!.copyWith(color: AppColors.background),
+          style: context.textTheme().labelMedium!.copyWith(
+                color: context.colorScheme().scrim,
+              ),
         ),
       ),
     );
@@ -56,7 +67,8 @@ class SonrakiDersContainer extends StatelessWidget {
   Text sonrakiKonu(BuildContext context) {
     return Text(
       "Harfler",
-      style: context.textTheme().bodyMedium!.copyWith(color: AppColors.primary),
+      style:
+          context.textTheme().bodyMedium!.copyWith(color: context.colorScheme().primary),
     );
   }
 
@@ -67,12 +79,12 @@ class SonrakiDersContainer extends StatelessWidget {
     );
   }
 
-  CircleAvatar nextCircleAvatar() {
+  CircleAvatar nextCircleAvatar(BuildContext context) {
     return CircleAvatar(
-      backgroundColor: AppColors.background,
+      backgroundColor: context.colorScheme().scrim,
       child: SvgPicture.asset(
         'assets/icons/arrow_right_alt.svg',
-        color: AppColors.primary,
+        color: context.colorScheme().primary,
       ),
     );
   }
